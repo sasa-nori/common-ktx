@@ -26,7 +26,7 @@ fun Context.getPreferences(name: String = "shared_pref"): SharedPreferences =
 
 fun Context.changeDpToPx(dp: Float): Float = dp * resources.displayMetrics.density
 
-fun Context.getColor(@ColorRes colorRes: Int): Int = ContextCompat.getColor(this, colorRes)
+fun Context.getColorCompat(@ColorRes colorRes: Int): Int = ContextCompat.getColor(this, colorRes)
 
 fun Context.getLocationManager(): LocationManager? = getSystemService()
 
@@ -43,9 +43,9 @@ fun Context.isActiveNetwork(): Boolean {
         return when {
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
-            //for other device how are able to connect with Ethernet
+            // for other device how are able to connect with Ethernet
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
-            //for check internet over Bluetooth
+            // for check internet over Bluetooth
             actNw.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH) -> true
             else -> false
         }
