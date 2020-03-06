@@ -2,7 +2,10 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.sasa-nori'
+apply plugin: "org.jlleitschuh.gradle.ktlint"
+apply plugin: "org.jlleitschuh.gradle.ktlint-idea"
+
+group = 'com.github.sasa-nori'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -53,7 +56,7 @@ task sourcesJar(type: Jar) {
 }
 
 task javadoc(type: Javadoc) {
-    failOnError  false
+    failOnError false
     source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     classpath += configurations.compile
@@ -68,4 +71,16 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives sourcesJar
     archives javadocJar
+}
+
+import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
+ktlint {
+    version = "0.22.0"
+    android = true
+    reporters = [ReporterType.CHECKSTYLE]
+    ignoreFailures = true
+
+    filter {
+        exclude("**/*test*/**")
+    }
 }

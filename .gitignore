@@ -38,6 +38,7 @@ captures/
 
 # IntelliJ
 *.iml
+.idea/sonarlint
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
@@ -73,7 +74,7 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
-
+vender/
 # Version control
 vcs.xml
 
