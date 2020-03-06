@@ -1,0 +1,4 @@
+rootProject.name='CommonKtx'
+include ':example3'
+include ':library'
+include ':example'
