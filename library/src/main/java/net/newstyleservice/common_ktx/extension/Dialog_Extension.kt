@@ -9,7 +9,8 @@ import android.view.Window
 import androidx.annotation.LayoutRes
 
 fun Dialog.createFullScreen(
-    @LayoutRes layoutRes: Int?, isCancelable: Boolean = true,
+    @LayoutRes layoutRes: Int?,
+    isCancelable: Boolean = true,
     isCanceledOnTouchOutside: Boolean = true
 ) {
     requestWindowFeature(Window.FEATURE_NO_TITLE)
