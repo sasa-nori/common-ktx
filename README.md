@@ -25,6 +25,25 @@ dependencies {
 
 ## Examples
 
+### Object to JSON String
+
+Add Moshi codegen
+
+```
+kapt "com.squareup.moshi:moshi-kotlin-codegen:1.9.2"
+```
+
+Added `@JsonClass(generateAdapter = true)` to Class top
+
+```
+@JsonClass(generateAdapter = true)
+data class Test(val first: String, val second: String)
+```
+
+```
+Test("first", "second").toJsonString()
+```
+
 ### SingleClick
 
 ```
