@@ -1,0 +1,18 @@
+# encoding: utf-8
+
+default_platform(:android)
+
+platform :android do
+  before_all do
+    ENV["BRANCH_NAME"] = git_branch
+    ENV["COMMIT_MESSAGE"] = last_git_commit[:message]
+    gradle(task: "library:clean")
+  end
+
+  desc "Runs all the Tests"
+  lane :lint do
+    danger
+    gradle(task: "library:test")
+  end
+
+end
