@@ -5,14 +5,27 @@ import android.app.Activity
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 
 fun Activity.hasPermission(permissions: List<String>): Boolean =
     this.hasRuntimePermissions(permissions)
 
+fun AppCompatActivity.showDialog(
+    dialog: DialogFragment,
+    arg: Bundle? = null,
+    tag: String = dialog.javaClass.canonicalName.toString()
+) {
+    arg?.let {
+        dialog.arguments = arg
+    }
+    dialog.show(supportFragmentManager, tag)
+}
+
 @SuppressLint("ResourceType")
 fun AppCompatActivity.addFragment(
-    @LayoutRes container: Int, fragment: Fragment,
+    @LayoutRes container: Int,
+    fragment: Fragment,
     arg: Bundle? = null,
     isAddStack: Boolean = false,
     stackTag: String? = null
@@ -30,7 +43,8 @@ fun AppCompatActivity.addFragment(
 
 @SuppressLint("ResourceType")
 fun AppCompatActivity.addNowFragment(
-    @LayoutRes container: Int, fragment: Fragment,
+    @LayoutRes container: Int,
+    fragment: Fragment,
     arg: Bundle? = null,
     isAddStack: Boolean = false,
     stackTag: String? = null
@@ -48,7 +62,8 @@ fun AppCompatActivity.addNowFragment(
 
 @SuppressLint("ResourceType")
 fun AppCompatActivity.replaceFragment(
-    @LayoutRes container: Int, fragment: Fragment,
+    @LayoutRes container: Int,
+    fragment: Fragment,
     arg: Bundle? = null,
     isAddStack: Boolean = false,
     stackTag: String? = null
@@ -66,7 +81,8 @@ fun AppCompatActivity.replaceFragment(
 
 @SuppressLint("ResourceType")
 fun AppCompatActivity.replaceNowFragment(
-    @LayoutRes container: Int, fragment: Fragment,
+    @LayoutRes container: Int,
+    fragment: Fragment,
     arg: Bundle? = null,
     isAddStack: Boolean = false,
     stackTag: String? = null
