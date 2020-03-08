@@ -9,7 +9,8 @@ apply plugin: 'kotlin-kapt'
 group = 'com.github.sasa-nori'
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    //noinspection GradleDependency
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 23
