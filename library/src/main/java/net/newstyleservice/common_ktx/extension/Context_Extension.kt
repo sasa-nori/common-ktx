@@ -8,6 +8,8 @@ import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.annotation.ColorRes
 import androidx.annotation.RequiresPermission
 import androidx.core.content.ContextCompat
@@ -50,4 +52,13 @@ fun Context.isActiveNetwork(): Boolean {
             else -> false
         }
     } ?: false
+}
+
+/**
+ * Hide to Keyboard
+ */
+fun Context.hideKeyboard(view: View) {
+    val inputMethodManager: InputMethodManager = getSystemService()!!
+    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+    view.clearFocus()
 }

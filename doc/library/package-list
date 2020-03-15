@@ -1,0 +1,54 @@
+$dokka.format:markdown
+$dokka.linkExtension:md
+$dokka.location:net.newstyleservice.common_ktx.extension$addFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/add-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$addFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/add-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$addNowFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/add-now-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$addNowFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/add-now-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$changeDpToPx(android.content.Context, kotlin.Float)net.newstyleservice.common_ktx.extension/android.content.-context/change-dp-to-px.md
+$dokka.location:net.newstyleservice.common_ktx.extension$changeVisible(android.view.View, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.view.-view/change-visible.md
+$dokka.location:net.newstyleservice.common_ktx.extension$createFullScreen(android.app.Dialog, kotlin.Int, kotlin.Boolean, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.app.-dialog/create-full-screen.md
+$dokka.location:net.newstyleservice.common_ktx.extension$decimalText(kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/decimal-text.md
+$dokka.location:net.newstyleservice.common_ktx.extension$delete(androidx.fragment.app.DialogFragment)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-dialog-fragment/delete.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getAlarmManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-alarm-manager.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getColorCompat(android.content.Context, kotlin.Int)net.newstyleservice.common_ktx.extension/android.content.-context/get-color-compat.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getConnectivityManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-connectivity-manager.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getHour(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/get-hour.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getLocationManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-location-manager.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getMinute(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/get-minute.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getMonth(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/get-month.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getPreferences(android.content.Context, kotlin.String)net.newstyleservice.common_ktx.extension/android.content.-context/get-preferences.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getSecond(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/get-second.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getString(android.widget.EditText)net.newstyleservice.common_ktx.extension/android.widget.-edit-text/get-string.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getViewSize(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/get-view-size.md
+$dokka.location:net.newstyleservice.common_ktx.extension$getYear(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/get-year.md
+$dokka.location:net.newstyleservice.common_ktx.extension$gone(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/gone.md
+$dokka.location:net.newstyleservice.common_ktx.extension$hasPermission(android.app.Activity, kotlin.collections.List((kotlin.String)))net.newstyleservice.common_ktx.extension/android.app.-activity/has-permission.md
+$dokka.location:net.newstyleservice.common_ktx.extension$hasPermission(androidx.fragment.app.DialogFragment, kotlin.collections.List((kotlin.String)))net.newstyleservice.common_ktx.extension/androidx.fragment.app.-dialog-fragment/has-permission.md
+$dokka.location:net.newstyleservice.common_ktx.extension$hasPermission(androidx.fragment.app.Fragment, kotlin.collections.List((kotlin.String)))net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/has-permission.md
+$dokka.location:net.newstyleservice.common_ktx.extension$hasRuntimePermissions(android.content.Context, kotlin.collections.List((kotlin.String)))net.newstyleservice.common_ktx.extension/android.content.-context/has-runtime-permissions.md
+$dokka.location:net.newstyleservice.common_ktx.extension$hideKeyboard(android.content.Context, android.view.View)net.newstyleservice.common_ktx.extension/android.content.-context/hide-keyboard.md
+$dokka.location:net.newstyleservice.common_ktx.extension$hideKeyboard(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/hide-keyboard.md
+$dokka.location:net.newstyleservice.common_ktx.extension$inVisible(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/in-visible.md
+$dokka.location:net.newstyleservice.common_ktx.extension$initHiddenKeyboard(android.app.Activity)net.newstyleservice.common_ktx.extension/android.app.-activity/init-hidden-keyboard.md
+$dokka.location:net.newstyleservice.common_ktx.extension$isActiveNetwork(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/is-active-network.md
+$dokka.location:net.newstyleservice.common_ktx.extension$makeFile(kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/make-file.md
+$dokka.location:net.newstyleservice.common_ktx.extension$moveFile(kotlin.String, kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/move-file.md
+$dokka.location:net.newstyleservice.common_ktx.extension$recursiveDeleteFile(java.io.File)net.newstyleservice.common_ktx.extension/java.io.-file/recursive-delete-file.md
+$dokka.location:net.newstyleservice.common_ktx.extension$replaceFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/replace-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$replaceFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/replace-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$replaceNowFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/replace-now-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$replaceNowFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/replace-now-fragment.md
+$dokka.location:net.newstyleservice.common_ktx.extension$resizeBitmap(android.net.Uri, android.content.Context, kotlin.Int, kotlin.Int)net.newstyleservice.common_ktx.extension/android.net.-uri/resize-bitmap.md
+$dokka.location:net.newstyleservice.common_ktx.extension$setOnSingleClickListener(android.view.View, kotlin.Function1((android.view.View, kotlin.Unit)))net.newstyleservice.common_ktx.extension/android.view.-view/set-on-single-click-listener.md
+$dokka.location:net.newstyleservice.common_ktx.extension$showDialog(androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.DialogFragment, android.os.Bundle, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/show-dialog.md
+$dokka.location:net.newstyleservice.common_ktx.extension$showDialog(androidx.fragment.app.Fragment, androidx.fragment.app.DialogFragment, android.os.Bundle, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/show-dialog.md
+$dokka.location:net.newstyleservice.common_ktx.extension$showGallery(android.app.Activity, kotlin.Int)net.newstyleservice.common_ktx.extension/android.app.-activity/show-gallery.md
+$dokka.location:net.newstyleservice.common_ktx.extension$showKeyboard(android.widget.EditText, kotlin.Long)net.newstyleservice.common_ktx.extension/android.widget.-edit-text/show-keyboard.md
+$dokka.location:net.newstyleservice.common_ktx.extension$toDate(kotlin.String, kotlin.String, java.util.Locale)net.newstyleservice.common_ktx.extension/kotlin.-string/to-date.md
+$dokka.location:net.newstyleservice.common_ktx.extension$toJsonString(kotlin.Any)net.newstyleservice.common_ktx.extension/kotlin.-any/to-json-string.md
+$dokka.location:net.newstyleservice.common_ktx.extension$toSepia(android.graphics.Bitmap)net.newstyleservice.common_ktx.extension/android.graphics.-bitmap/to-sepia.md
+$dokka.location:net.newstyleservice.common_ktx.extension$toString(java.util.Date, kotlin.String, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/to-string.md
+$dokka.location:net.newstyleservice.common_ktx.extension$visible(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/visible.md
+net.newstyleservice.common_ktx
+net.newstyleservice.common_ktx.extension
+net.newstyleservice.common_ktx.listener

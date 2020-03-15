@@ -2,7 +2,9 @@ package net.newstyleservice.common_ktx.extension
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
@@ -96,4 +98,22 @@ fun AppCompatActivity.replaceNowFragment(
         transaction.addToBackStack(stackTag)
     }
     transaction.commitNow()
+}
+
+/**
+ * Do not display keyboard in initial display of Activity
+ */
+fun Activity.initHiddenKeyboard() {
+    window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+}
+
+/**
+ * Show Gallery of Devise
+ *
+ * @param requestCode requestCode of [Activity.startActivityForResult]
+ */
+fun Activity.showGallery(requestCode: Int = 1) {
+    val photoPickerIntent = Intent(Intent.ACTION_PICK)
+    photoPickerIntent.type = "image/*"
+    startActivityForResult(photoPickerIntent, requestCode)
 }
