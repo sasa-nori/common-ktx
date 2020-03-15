@@ -5,6 +5,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
 apply plugin: "org.jlleitschuh.gradle.ktlint-idea"
 apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.dokka'
 
 group = 'com.github.sasa-nori'
 android {
@@ -87,4 +88,9 @@ ktlint {
     filter {
         exclude("**/*test*/**")
     }
+}
+
+dokka {
+    outputFormat = 'markdown'
+    outputDirectory = "../doc"
 }

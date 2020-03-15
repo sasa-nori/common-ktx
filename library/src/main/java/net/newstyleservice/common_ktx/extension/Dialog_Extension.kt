@@ -8,6 +8,14 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.annotation.LayoutRes
 
+/**
+ * Crate FullScreen Dialog
+ * Can be used in DialogFragment
+ *
+ * @param layoutRes Layout Res
+ * @param isCancelable true = setCancelable is true
+ * @param isCanceledOnTouchOutside true = setCanceledOnTouchOutside is true
+ */
 fun Dialog.createFullScreen(
     @LayoutRes layoutRes: Int?,
     isCancelable: Boolean = true,
