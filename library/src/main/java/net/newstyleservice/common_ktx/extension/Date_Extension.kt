@@ -1,13 +1,11 @@
 package net.newstyleservice.common_ktx.extension
 
-import androidx.annotation.Nullable
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
-@Nullable
 fun Date.toString(
     pattern: String = "yyyy/MM/dd HH:mm:ss",
     locale: Locale = Locale.getDefault()

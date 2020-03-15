@@ -1,7 +1,6 @@
 # CommonKtx
 
 [![](https://jitpack.io/v/sasa-nori/CommonKtx.svg)](https://jitpack.io/#sasa-nori/CommonKtx)
-[![Build Status](https://app.bitrise.io/app/22d11ce72703f6cf/status.svg?token=pUw0yloA1oUm8sWmo03Deg&branch=develop)](https://app.bitrise.io/app/22d11ce72703f6cf)
 
 ## Prerequisites
 
@@ -22,6 +21,10 @@ dependencies {
     implementation "com.github.sasa-nori:CommonKtx:$latestVersion"
 }
 ```
+
+## Doc
+
+[Document markdown](./doc/library/index.md)
 
 ## Examples
 

@@ -5,16 +5,19 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
 apply plugin: "org.jlleitschuh.gradle.ktlint-idea"
 apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.dokka'
 
 group = 'com.github.sasa-nori'
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    //noinspection GradleDependency
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 29
-        versionName "1.0.1"
+        versionCode 1
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -85,4 +88,9 @@ ktlint {
     filter {
         exclude("**/*test*/**")
     }
+}
+
+dokka {
+    outputFormat = 'markdown'
+    outputDirectory = "../doc"
 }
