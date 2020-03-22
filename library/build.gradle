@@ -22,7 +22,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
-
+    libraryVariants.all {
+        it.generateBuildConfig.enabled = false
+    }
     buildTypes {
         release {
             minifyEnabled false
