@@ -8,17 +8,17 @@
 
 ## install
 
-```
+``` build.gradle
 allprojects {
     repositories {
-        google()
-        jcenter()
         maven { url 'https://jitpack.io' }
     }
 }
+```
 
+```app/build.gradle
 dependencies {
-    implementation "com.github.sasa-nori:CommonKtx:$latestVersion"
+    implementation "com.github.sasa-nori:CommonKtx:1.0.3"
 }
 ```
 
