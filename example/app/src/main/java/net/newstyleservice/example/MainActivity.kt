@@ -5,8 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.fab
-import kotlinx.android.synthetic.main.activity_main.toolbar
+import kotlinx.android.synthetic.main.activity_main.*
 import net.newstyleservice.common_ktx.extension.setOnSingleClickListener
 
 class MainActivity : AppCompatActivity() {
@@ -17,19 +16,14 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnSingleClickListener { view ->
-            Snackbar.make(view!!, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+            view?.let {
+                val pref = MyPreferences(this)
+                pref.touchCount++
 
-        val pref = Preferences(this)
-        val isFirstLaunch = when (pref.isFirstLaunch) {
-            true -> {
-                pref.isFirstLaunch = false
-                true
+                Snackbar.make(it, "Touch Count is ${pref.touchCount}", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show()
             }
-            else -> false
         }
-        Snackbar.make(fab, "isFirstLaunch = $isFirstLaunch", Snackbar.LENGTH_LONG).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
