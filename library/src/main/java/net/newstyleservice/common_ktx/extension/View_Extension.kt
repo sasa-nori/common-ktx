@@ -2,6 +2,7 @@ package net.newstyleservice.common_ktx.extension
 
 import android.graphics.Point
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.getSystemService
 import net.newstyleservice.common_ktx.listener.SingleClickListener
@@ -11,9 +12,13 @@ import net.newstyleservice.common_ktx.listener.SingleClickListener
  * Interval is 500ms
  *
  * @param listener [View.OnClickListener]
+ * @param enableDelayTime [ViewConfiguration.getJumpTapTimeout] by 500ms
  */
-fun View.setOnSingleClickListener(listener: (View?) -> Unit) {
-    setOnClickListener(SingleClickListener(listener))
+fun View.setOnSingleClickListener(
+    listener: (View?) -> Unit,
+    enableDelayTime: Long = ViewConfiguration.getJumpTapTimeout().toLong()
+) {
+    setOnClickListener(SingleClickListener(listener, enableDelayTime))
 }
 
 /**
