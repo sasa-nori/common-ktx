@@ -30,6 +30,8 @@ dependencies {
 
 ## Examples
 
+[CommonKtx-Example](https://github.com/sasa-nori/CommonKtx-Example)
+
 ### Object to JSON String
 
 Add Moshi codegen
