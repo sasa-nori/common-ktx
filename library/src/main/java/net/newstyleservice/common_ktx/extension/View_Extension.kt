@@ -11,12 +11,12 @@ import net.newstyleservice.common_ktx.listener.SingleClickListener
  * Set On Single Click Listener
  * Interval is 500ms
  *
- * @param listener [View.OnClickListener]
  * @param enableDelayTime [ViewConfiguration.getJumpTapTimeout] by 500ms
+ * @param listener [View.OnClickListener]
  */
 fun View.setOnSingleClickListener(
-    listener: (View?) -> Unit,
-    enableDelayTime: Long = ViewConfiguration.getJumpTapTimeout().toLong()
+    enableDelayTime: Long = ViewConfiguration.getJumpTapTimeout().toLong(),
+    listener: (View?) -> Unit
 ) {
     setOnClickListener(SingleClickListener(listener, enableDelayTime))
 }

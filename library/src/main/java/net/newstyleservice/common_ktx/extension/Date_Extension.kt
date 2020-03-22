@@ -6,7 +6,7 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
-fun Date.toString(
+fun Date.toFormat(
     pattern: String = "yyyy/MM/dd HH:mm:ss",
     locale: Locale = Locale.getDefault()
 ): String? {
@@ -18,35 +18,35 @@ fun Date.toString(
     }
 }
 
-fun Date.getYear(locale: Locale = Locale.getDefault()): Int {
+fun Date.year(locale: Locale = Locale.getDefault()): Int {
     val calendar = Calendar.getInstance(locale)
     calendar.clear()
     calendar.time = this
     return calendar.get(Calendar.YEAR)
 }
 
-fun Date.getMonth(locale: Locale = Locale.getDefault()): Int {
+fun Date.month(locale: Locale = Locale.getDefault()): Int {
     val calendar = Calendar.getInstance(locale)
     calendar.clear()
     calendar.time = this
     return calendar.get(Calendar.DAY_OF_MONTH)
 }
 
-fun Date.getHour(locale: Locale = Locale.getDefault()): Int {
+fun Date.hour(locale: Locale = Locale.getDefault()): Int {
     val calendar = Calendar.getInstance(locale)
     calendar.clear()
     calendar.time = this
     return calendar.get(Calendar.HOUR_OF_DAY)
 }
 
-fun Date.getMinute(locale: Locale = Locale.getDefault()): Int {
+fun Date.mnute(locale: Locale = Locale.getDefault()): Int {
     val calendar = Calendar.getInstance(locale)
     calendar.clear()
     calendar.time = this
     return calendar.get(Calendar.MINUTE)
 }
 
-fun Date.getSecond(locale: Locale = Locale.getDefault()): Int {
+fun Date.second(locale: Locale = Locale.getDefault()): Int {
     val calendar = Calendar.getInstance(locale)
     calendar.clear()
     calendar.time = this
