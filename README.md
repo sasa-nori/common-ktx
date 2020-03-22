@@ -8,7 +8,7 @@
 
 ## install
 
-```
+```build.gradle
 allprojects {
     repositories {
         google()
@@ -17,6 +17,8 @@ allprojects {
     }
 }
 
+```
+```app/build.gradle
 dependencies {
     implementation "com.github.sasa-nori:CommonKtx:$latestVersion"
 }
@@ -49,11 +51,22 @@ Test("first", "second").toJsonString()
 
 ### SingleClick
 
+default timeout is 500ms
+
 ```
 button.setOnSingleClickListener {
     // run
 }
 ```
+
+to custom
+
+```
+button.setOnSingleClickListener(300, { view->
+     // run
+})
+```
+
 
 ### Check RuntimePermission
 
