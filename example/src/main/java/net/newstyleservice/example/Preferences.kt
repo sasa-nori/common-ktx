@@ -4,5 +4,5 @@ import android.content.Context
 import net.newstyleservice.common_ktx.SharedPrefDelegated
 
 class Preferences(context: Context) : SharedPrefDelegated(context) {
-    var isFirstLaunch: Boolean by pref(default = true)
+    var tapCount: Int by pref(default = 0)
 }

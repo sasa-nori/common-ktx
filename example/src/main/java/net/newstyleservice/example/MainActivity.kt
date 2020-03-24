@@ -17,19 +17,13 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnSingleClickListener { view ->
-            Snackbar.make(view!!, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-
-        val pref = Preferences(this)
-        val isFirstLaunch = when (pref.isFirstLaunch) {
-            true -> {
-                pref.isFirstLaunch = false
-                true
+            view?.let {
+                val pref = Preferences(this)
+                pref.tapCount++
+                Snackbar.make(it, "Tapped count is ${pref.tapCount}", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
             }
-            else -> false
         }
-        Snackbar.make(fab, "isFirstLaunch = $isFirstLaunch", Snackbar.LENGTH_LONG).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
