@@ -1,6 +1,6 @@
 # CommonKtx
 
-[![](https://jitpack.io/v/sasa-nori/CommonKtx.svg)](https://jitpack.io/#sasa-nori/CommonKtx)
+[![](https://jitpack.io/v/sasa-nori/common-ktx.svg)](https://jitpack.io/#sasa-nori/common-ktx)
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ allprojects {
 ```
 ```app/build.gradle
 dependencies {
-    implementation "com.github.sasa-nori:CommonKtx:$latestVersion"
+    implementation "com.github.sasa-nori:common-ktx:$latestVersion"
 }
 ```
 
