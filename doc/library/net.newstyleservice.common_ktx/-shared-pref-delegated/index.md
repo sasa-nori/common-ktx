@@ -16,5 +16,5 @@
 
 ### Extension Functions
 
-| [toJsonString](../../net.newstyleservice.common_ktx.extension/kotlin.-any/to-json-string.md) | `fun `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.toJsonString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
+| [toJsonString](../../net.newstyleservice.common_ktx.extension/kotlin.-any/to-json-string.md) | `fun `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.toJsonString(isLog: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 
