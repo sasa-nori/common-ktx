@@ -6,7 +6,7 @@
 
 ### Constructors
 
-| [&lt;init&gt;](-init-.md) | `SingleClickListener(onSingleClick: (View?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`)` |
+| [&lt;init&gt;](-init-.md) | `SingleClickListener(onSingleClick: (View?) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`, enableDelayTime: `[`Long`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)` = ViewConfiguration.getJumpTapTimeout().toLong())` |
 
 ### Functions
 
@@ -14,5 +14,5 @@
 
 ### Extension Functions
 
-| [toJsonString](../../net.newstyleservice.common_ktx.extension/kotlin.-any/to-json-string.md) | `fun `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.toJsonString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
+| [toJsonString](../../net.newstyleservice.common_ktx.extension/kotlin.-any/to-json-string.md) | `fun `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.toJsonString(isLog: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 

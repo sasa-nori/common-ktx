@@ -10,6 +10,7 @@
 | [android.graphics.Bitmap](android.graphics.-bitmap/index.md) |  |
 | [android.net.Uri](android.net.-uri/index.md) |  |
 | [android.view.View](android.view.-view/index.md) |  |
+| [android.view.ViewGroup](android.view.-view-group/index.md) |  |
 | [android.widget.EditText](android.widget.-edit-text/index.md) |  |
 | [androidx.appcompat.app.AppCompatActivity](androidx.appcompat.app.-app-compat-activity/index.md) |  |
 | [androidx.fragment.app.DialogFragment](androidx.fragment.app.-dialog-fragment/index.md) |  |
@@ -17,5 +18,6 @@
 | [java.io.File](java.io.-file/index.md) |  |
 | [java.util.Date](java.util.-date/index.md) |  |
 | [kotlin.Any](kotlin.-any/index.md) |  |
+| [kotlin.Int](kotlin.-int/index.md) |  |
 | [kotlin.String](kotlin.-string/index.md) |  |
 

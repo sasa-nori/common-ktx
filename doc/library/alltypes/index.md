@@ -16,9 +16,11 @@
 | [android.widget.EditText](../net.newstyleservice.common_ktx.extension/android.widget.-edit-text/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
 | [java.io.File](../net.newstyleservice.common_ktx.extension/java.io.-file/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
 | [androidx.fragment.app.Fragment](../net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
+| [kotlin.Int](../net.newstyleservice.common_ktx.extension/kotlin.-int/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
 | [net.newstyleservice.common_ktx.SharedPrefDelegated](../net.newstyleservice.common_ktx/-shared-pref-delegated/index.md) |  |
 | [net.newstyleservice.common_ktx.listener.SingleClickListener](../net.newstyleservice.common_ktx.listener/-single-click-listener/index.md) |  |
 | [kotlin.String](../net.newstyleservice.common_ktx.extension/kotlin.-string/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
 | [android.net.Uri](../net.newstyleservice.common_ktx.extension/android.net.-uri/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
 | [android.view.View](../net.newstyleservice.common_ktx.extension/android.view.-view/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
+| [android.view.ViewGroup](../net.newstyleservice.common_ktx.extension/android.view.-view-group/index.md) (extensions in package net.newstyleservice.common_ktx.extension) |  |
 
