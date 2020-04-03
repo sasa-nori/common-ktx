@@ -7,15 +7,6 @@ import java.util.Date
 import java.util.Locale
 
 /**
- * String to Decimal Text
- *
- * @return example 10000 to 10,000
- */
-fun String.decimalText(): String {
-    return String.format("%,d", this)
-}
-
-/**
  * String parse to Date
  *
  * @param pattern default = "yyyy/MM/dd HH:mm:ss"
@@ -59,4 +50,42 @@ fun String.moveFile(target: String): File? {
         true -> movedFile
         else -> null
     }
+}
+
+fun String.matchPattern(
+    pattern: String,
+    errorMessage: String = "",
+    error: ((String) -> Unit?)? = null
+): Boolean {
+    return pattern.toRegex().matchEntire(this)?.let {
+        true
+    } ?: run {
+        error?.let {
+            it(errorMessage)
+        }
+        false
+    }
+}
+
+fun String.isMailAddress(
+    errorMessage: String = "",
+    error: ((String) -> Unit?)? = null
+): Boolean {
+    val pattern = "^[a-zA-Z0-9\\._\\-\\+]+@[a-zA-Z0-9_\\-]+\\.[a-zA-Z\\.]+[a-zA-Z]\$"
+    return matchPattern(pattern, errorMessage, error)
+}
+
+fun String.isPhoneNumber(errorMessage: String = "", error: ((String) -> Unit?)? = null): Boolean {
+    val pattern = "\\d{10}|\\d{11}"
+    return matchPattern(pattern, errorMessage, error)
+}
+
+fun String.isNumber(errorMessage: String = "", error: ((String) -> Unit?)? = null): Boolean {
+    val pattern = "^[0-9].*?\$"
+    return matchPattern(pattern, errorMessage, error)
+}
+
+fun String.isInt(errorMessage: String = "", error: ((String) -> Unit?)? = null): Boolean {
+    val pattern = "^[0-9]{11}\$"
+    return matchPattern(pattern, errorMessage, error)
 }
