@@ -5,6 +5,15 @@ import android.content.res.Resources
 import android.content.res.Resources.NotFoundException
 
 /**
+ * Integer to Decimal Text
+ *
+ * @return example 10000 to 10,000
+ */
+fun Int.decimalText(): String {
+    return String.format("%,d", this)
+}
+
+/**
  * Get Dimension Pixel Size
  * @see [Resources.getDimensionPixelSize]
  *
