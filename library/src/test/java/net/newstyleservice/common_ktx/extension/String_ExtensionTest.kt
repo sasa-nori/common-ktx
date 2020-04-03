@@ -5,7 +5,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
-internal class String_ExtensionKtTest {
+internal class String_ExtensionTest {
 
     @Test
     fun isMailAddress() {
