@@ -2,7 +2,7 @@ package net.newstyleservice.common_ktx.extension
 
 import androidx.fragment.app.DialogFragment
 
-fun DialogFragment.hasPermission(permissions: List<String>): Boolean =
+fun DialogFragment.hasPermission(permissions: Array<String>): Boolean =
     requireContext().hasRuntimePermissions(permissions)
 
 fun DialogFragment.delete() {

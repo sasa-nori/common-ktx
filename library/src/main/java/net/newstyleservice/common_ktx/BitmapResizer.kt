@@ -12,13 +12,13 @@ import kotlin.math.min
  */
 class BitmapResizer(private val context: Context) {
     @Throws(IOException::class)
-    fun resize(uri: Uri?, mMaxWidth: Int, mMaxHeight: Int): Bitmap? {
+    fun resize(uri: Uri, mMaxWidth: Int, mMaxHeight: Int): Bitmap? {
         val bitmap: Bitmap?
         val decodeOptions = BitmapFactory.Options()
         decodeOptions.inJustDecodeBounds = true
-        var inputStream = context.contentResolver.openInputStream(uri!!)
+        var inputStream = context.contentResolver.openInputStream(uri)
         BitmapFactory.decodeStream(inputStream, null, decodeOptions)
-        inputStream!!.close()
+        inputStream?.close()
         val actualWidth = decodeOptions.outWidth
         val actualHeight = decodeOptions.outHeight
         val desiredWidth = getResizedDimension(
@@ -38,19 +38,20 @@ class BitmapResizer(private val context: Context) {
         )
         inputStream = context.contentResolver.openInputStream(uri)
         val tempBitmap = BitmapFactory.decodeStream(inputStream, null, decodeOptions)
-        inputStream!!.close()
-        if (tempBitmap != null && (tempBitmap.width > desiredWidth ||
-                    tempBitmap.height > desiredHeight)
+        inputStream?.close()
+
+        return if (tempBitmap != null &&
+            (tempBitmap.width > desiredWidth || tempBitmap.height > desiredHeight)
         ) {
             bitmap = Bitmap.createScaledBitmap(
                 tempBitmap,
                 desiredWidth, desiredHeight, true
             )
             tempBitmap.recycle()
+            return bitmap
         } else {
-            bitmap = tempBitmap
+            tempBitmap
         }
-        return bitmap
     }
 
     private fun getResizedDimension(
@@ -59,17 +60,15 @@ class BitmapResizer(private val context: Context) {
         actualPrimary: Int,
         actualSecondary: Int
     ): Int {
-        if (maxPrimary == 0 && maxSecondary == 0) {
-            return actualPrimary
-        }
+        if (maxPrimary == 0 && maxSecondary == 0) return actualPrimary
+
         if (maxPrimary == 0) {
             val ratio =
                 maxSecondary.toDouble() / actualSecondary.toDouble()
             return (actualPrimary * ratio).toInt()
         }
-        if (maxSecondary == 0) {
-            return maxPrimary
-        }
+        if (maxSecondary == 0) return maxPrimary
+
         val ratio = actualSecondary.toDouble() / actualPrimary.toDouble()
         var resized = maxPrimary
         if (resized * ratio < maxSecondary) {
