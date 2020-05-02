@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>createRetrofitService - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">net.sasa_nori.common_ktx.extension</a>&nbsp;/&nbsp;<a href="index.html">kotlin.String</a>&nbsp;/&nbsp;<a href="./create-retrofit-service.html">createRetrofitService</a><br/>
+<br/>
+<h1>createRetrofitService</h1>
+<a name="net.sasa_nori.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.sasa_nori.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">.</span><span class="identifier">createRetrofitService</span><span class="symbol">(</span><span class="identifier" id="net.sasa_nori.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.sasa_nori.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)/service">service</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><a href="create-retrofit-service.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="net.sasa_nori.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.sasa_nori.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)/client">client</span><span class="symbol">:</span>&nbsp;<span class="identifier">OkHttpClient</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;HttpClient.defaultClient<span class="symbol">, </span><span class="identifier" id="net.sasa_nori.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.sasa_nori.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)/converterFactory">converterFactory</span><span class="symbol">:</span>&nbsp;<span class="identifier">Factory</span><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;MoshiConverterFactory.create(
+        Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+    )<span class="symbol">)</span><span class="symbol">: </span><a href="create-retrofit-service.html#T"><span class="identifier">T</span></a></code>
+<p>Create Retrofit Service</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+<code>T</code> - Service interface class</p>
+<p><a name="service"></a>
+<code>service</code> - Service interface class</p>
+<p><a name="client"></a>
+<code>client</code> - OkHttpClient :default <a href="../../net.sasa_nori.common_ktx/-http-client/index.html">HttpClient</a></p>
+<p><a name="converterFactory"></a>
+<code>converterFactory</code> - Json Parser Converter Factory :default <a href="#">MoshiConverterFactory</a></p>
+<p><strong>Return</strong><br/>
+Service interface class Instance</p>
+</BODY>
+</HTML>

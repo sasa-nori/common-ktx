@@ -1,92 +1,93 @@
 $dokka.format:html
 $dokka.linkExtension:html
-$dokka.location:net.newstyleservice.common_ktx.extension$addFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/add-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$addFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/add-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$addNowFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/add-now-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$addNowFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/add-now-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$changeDpToPx(android.content.Context, kotlin.Float)net.newstyleservice.common_ktx.extension/android.content.-context/change-dp-to-px.html
-$dokka.location:net.newstyleservice.common_ktx.extension$changeVisible(android.view.View, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.view.-view/change-visible.html
-$dokka.location:net.newstyleservice.common_ktx.extension$createFullScreen(android.app.Dialog, kotlin.Int, kotlin.Boolean, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.app.-dialog/create-full-screen.html
-$dokka.location:net.newstyleservice.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.newstyleservice.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)net.newstyleservice.common_ktx.extension/kotlin.-string/create-retrofit-service.html
-$dokka.location:net.newstyleservice.common_ktx.extension$decimalText(kotlin.Int)net.newstyleservice.common_ktx.extension/kotlin.-int/decimal-text.html
-$dokka.location:net.newstyleservice.common_ktx.extension$decimalText(kotlin.Long)net.newstyleservice.common_ktx.extension/kotlin.-long/decimal-text.html
-$dokka.location:net.newstyleservice.common_ktx.extension$delete(androidx.fragment.app.DialogFragment)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-dialog-fragment/delete.html
-$dokka.location:net.newstyleservice.common_ktx.extension$distanceBetween(android.location.Location, android.location.Location)net.newstyleservice.common_ktx.extension/android.location.-location/distance-between.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getAlarmManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-alarm-manager.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getColorCompat(android.content.Context, kotlin.Int)net.newstyleservice.common_ktx.extension/android.content.-context/get-color-compat.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getConnectivityManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-connectivity-manager.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getFileSize(kotlin.String, kotlin.Long)net.newstyleservice.common_ktx.extension/kotlin.-string/get-file-size.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getInputMethodManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-input-method-manager.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getLocationManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-location-manager.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getNotificationManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-notification-manager.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getPixelOffset(kotlin.Int, android.content.Context)net.newstyleservice.common_ktx.extension/kotlin.-int/get-pixel-offset.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getPixelSize(kotlin.Int, android.content.Context)net.newstyleservice.common_ktx.extension/kotlin.-int/get-pixel-size.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getPreferences(android.content.Context, kotlin.String)net.newstyleservice.common_ktx.extension/android.content.-context/get-preferences.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getString(android.widget.EditText)net.newstyleservice.common_ktx.extension/android.widget.-edit-text/get-string.html
-$dokka.location:net.newstyleservice.common_ktx.extension$getViewSize(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/get-view-size.html
-$dokka.location:net.newstyleservice.common_ktx.extension$gone(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/gone.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasAudioRecordPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-audio-record-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasCalendarPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-calendar-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasCameraCapturePermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-camera-capture-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasCameraPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-camera-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasFile(kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/has-file.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasFilePermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-file-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasLocationPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-location-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasMediaRecordPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-media-record-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasMicPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-mic-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasPermission(android.app.Activity, kotlin.Array((kotlin.String)))net.newstyleservice.common_ktx.extension/android.app.-activity/has-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasPermission(androidx.fragment.app.DialogFragment, kotlin.Array((kotlin.String)))net.newstyleservice.common_ktx.extension/androidx.fragment.app.-dialog-fragment/has-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasPermission(androidx.fragment.app.Fragment, kotlin.Array((kotlin.String)))net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/has-permission.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hasRuntimePermissions(android.content.Context, kotlin.Array((kotlin.String)))net.newstyleservice.common_ktx.extension/android.content.-context/has-runtime-permissions.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hideKeyboard(android.content.Context, android.view.View)net.newstyleservice.common_ktx.extension/android.content.-context/hide-keyboard.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hideKeyboard(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/hide-keyboard.html
-$dokka.location:net.newstyleservice.common_ktx.extension$hour(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/hour.html
-$dokka.location:net.newstyleservice.common_ktx.extension$inVisible(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/in-visible.html
-$dokka.location:net.newstyleservice.common_ktx.extension$inflate(android.view.ViewGroup, android.view.LayoutInflater, kotlin.Int, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.view.-view-group/inflate.html
-$dokka.location:net.newstyleservice.common_ktx.extension$initHiddenKeyboard(android.app.Activity)net.newstyleservice.common_ktx.extension/android.app.-activity/init-hidden-keyboard.html
-$dokka.location:net.newstyleservice.common_ktx.extension$isActiveNetwork(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/is-active-network.html
-$dokka.location:net.newstyleservice.common_ktx.extension$isInt(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.newstyleservice.common_ktx.extension/kotlin.-string/is-int.html
-$dokka.location:net.newstyleservice.common_ktx.extension$isMailAddress(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.newstyleservice.common_ktx.extension/kotlin.-string/is-mail-address.html
-$dokka.location:net.newstyleservice.common_ktx.extension$isNumber(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.newstyleservice.common_ktx.extension/kotlin.-string/is-number.html
-$dokka.location:net.newstyleservice.common_ktx.extension$isPhoneNumber(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.newstyleservice.common_ktx.extension/kotlin.-string/is-phone-number.html
-$dokka.location:net.newstyleservice.common_ktx.extension$isSuccessPermissionResult(kotlin.IntArray)net.newstyleservice.common_ktx.extension/kotlin.-int-array/is-success-permission-result.html
-$dokka.location:net.newstyleservice.common_ktx.extension$makeFile(kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/make-file.html
-$dokka.location:net.newstyleservice.common_ktx.extension$matchPattern(kotlin.String, kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.newstyleservice.common_ktx.extension/kotlin.-string/match-pattern.html
-$dokka.location:net.newstyleservice.common_ktx.extension$minute(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/minute.html
-$dokka.location:net.newstyleservice.common_ktx.extension$month(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/month.html
-$dokka.location:net.newstyleservice.common_ktx.extension$moveFile(kotlin.String, kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/move-file.html
-$dokka.location:net.newstyleservice.common_ktx.extension$onPermissionResult(kotlin.IntArray, net.newstyleservice.common_ktx.listener.PermissionListener)net.newstyleservice.common_ktx.extension/kotlin.-int-array/on-permission-result.html
-$dokka.location:net.newstyleservice.common_ktx.extension$recursiveDeleteFile(java.io.File)net.newstyleservice.common_ktx.extension/java.io.-file/recursive-delete-file.html
-$dokka.location:net.newstyleservice.common_ktx.extension$replaceFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/replace-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$replaceFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/replace-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$replaceNowFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/replace-now-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$replaceNowFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/replace-now-fragment.html
-$dokka.location:net.newstyleservice.common_ktx.extension$requestLocation(android.content.Context, android.location.LocationListener, kotlin.Function0((kotlin.Unit)), android.location.Criteria, kotlin.Boolean, kotlin.Long, kotlin.Float)net.newstyleservice.common_ktx.extension/android.content.-context/request-location.html
-$dokka.location:net.newstyleservice.common_ktx.extension$resizeBitmap(android.net.Uri, android.content.Context, kotlin.Int, kotlin.Int)net.newstyleservice.common_ktx.extension/android.net.-uri/resize-bitmap.html
-$dokka.location:net.newstyleservice.common_ktx.extension$save(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.graphics.-bitmap/save.html
-$dokka.location:net.newstyleservice.common_ktx.extension$second(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/second.html
-$dokka.location:net.newstyleservice.common_ktx.extension$sendNotification(android.content.Context, kotlin.String, kotlin.Int, kotlin.String, android.app.PendingIntent, kotlin.String, kotlin.String, kotlin.Int, androidx.core.app.NotificationCompat.Style, android.graphics.Bitmap, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)net.newstyleservice.common_ktx.extension/android.content.-context/send-notification.html
-$dokka.location:net.newstyleservice.common_ktx.extension$setMargin(android.view.View, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)net.newstyleservice.common_ktx.extension/android.view.-view/set-margin.html
-$dokka.location:net.newstyleservice.common_ktx.extension$setMarginRes(android.view.View, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)net.newstyleservice.common_ktx.extension/android.view.-view/set-margin-res.html
-$dokka.location:net.newstyleservice.common_ktx.extension$setNotificationChannel(android.content.Context, kotlin.String, kotlin.String, kotlin.Int, kotlin.String)net.newstyleservice.common_ktx.extension/android.content.-context/set-notification-channel.html
-$dokka.location:net.newstyleservice.common_ktx.extension$setOnSingleClickListener(android.view.View, kotlin.Long, kotlin.Function1((android.view.View, kotlin.Unit)))net.newstyleservice.common_ktx.extension/android.view.-view/set-on-single-click-listener.html
-$dokka.location:net.newstyleservice.common_ktx.extension$showDialog(androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.DialogFragment, android.os.Bundle, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/show-dialog.html
-$dokka.location:net.newstyleservice.common_ktx.extension$showDialog(androidx.fragment.app.Fragment, androidx.fragment.app.DialogFragment, android.os.Bundle, kotlin.String)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-fragment/show-dialog.html
-$dokka.location:net.newstyleservice.common_ktx.extension$showGallery(android.app.Activity, kotlin.Int)net.newstyleservice.common_ktx.extension/android.app.-activity/show-gallery.html
-$dokka.location:net.newstyleservice.common_ktx.extension$showKeyboard(android.widget.EditText, kotlin.Long)net.newstyleservice.common_ktx.extension/android.widget.-edit-text/show-keyboard.html
-$dokka.location:net.newstyleservice.common_ktx.extension$showToast(kotlin.String, android.content.Context, kotlin.Int)net.newstyleservice.common_ktx.extension/kotlin.-string/show-toast.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toBundleKey(kotlin.String, kotlin.Any)net.newstyleservice.common_ktx.extension/kotlin.-string/to-bundle-key.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toBundleValue(kotlin.Any, kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-any/to-bundle-value.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toDate(kotlin.String, kotlin.String, java.util.Locale)net.newstyleservice.common_ktx.extension/kotlin.-string/to-date.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toFormat(java.util.Date, kotlin.String, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/to-format.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toJsonString(kotlin.Any, kotlin.Boolean)net.newstyleservice.common_ktx.extension/kotlin.-any/to-json-string.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toMapKey(kotlin.String, kotlin.Any)net.newstyleservice.common_ktx.extension/kotlin.-string/to-map-key.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toMapValue(kotlin.Any, kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-any/to-map-value.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toMutableMapKey(kotlin.String, kotlin.Any)net.newstyleservice.common_ktx.extension/kotlin.-string/to-mutable-map-key.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toMutableMapValue(kotlin.Any, kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-any/to-mutable-map-value.html
-$dokka.location:net.newstyleservice.common_ktx.extension$toSepia(android.graphics.Bitmap)net.newstyleservice.common_ktx.extension/android.graphics.-bitmap/to-sepia.html
-$dokka.location:net.newstyleservice.common_ktx.extension$visible(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/visible.html
-$dokka.location:net.newstyleservice.common_ktx.extension$year(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/year.html
+$dokka.location:net.sasa_nori.common_ktx.extension$addFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/add-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$addFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.fragment.app.-fragment/add-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$addNowFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/add-now-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$addNowFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.fragment.app.-fragment/add-now-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$changeDpToPx(android.content.Context, kotlin.Float)net.sasa_nori.common_ktx.extension/android.content.-context/change-dp-to-px.html
+$dokka.location:net.sasa_nori.common_ktx.extension$changeVisible(android.view.View, kotlin.Boolean)net.sasa_nori.common_ktx.extension/android.view.-view/change-visible.html
+$dokka.location:net.sasa_nori.common_ktx.extension$createFullScreen(android.app.Dialog, kotlin.Int, kotlin.Boolean, kotlin.Boolean)net.sasa_nori.common_ktx.extension/android.app.-dialog/create-full-screen.html
+$dokka.location:net.sasa_nori.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.sasa_nori.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)net.sasa_nori.common_ktx.extension/kotlin.-string/create-retrofit-service.html
+$dokka.location:net.sasa_nori.common_ktx.extension$decimalText(kotlin.Int)net.sasa_nori.common_ktx.extension/kotlin.-int/decimal-text.html
+$dokka.location:net.sasa_nori.common_ktx.extension$decimalText(kotlin.Long)net.sasa_nori.common_ktx.extension/kotlin.-long/decimal-text.html
+$dokka.location:net.sasa_nori.common_ktx.extension$delete(androidx.fragment.app.DialogFragment)net.sasa_nori.common_ktx.extension/androidx.fragment.app.-dialog-fragment/delete.html
+$dokka.location:net.sasa_nori.common_ktx.extension$distanceBetween(android.location.Location, android.location.Location)net.sasa_nori.common_ktx.extension/android.location.-location/distance-between.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getAlarmManager(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/get-alarm-manager.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getColorCompat(android.content.Context, kotlin.Int)net.sasa_nori.common_ktx.extension/android.content.-context/get-color-compat.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getConnectivityManager(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/get-connectivity-manager.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getFileSize(kotlin.String, kotlin.Long)net.sasa_nori.common_ktx.extension/kotlin.-string/get-file-size.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getInputMethodManager(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/get-input-method-manager.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getLocationManager(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/get-location-manager.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getNotificationManager(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/get-notification-manager.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getPixelOffset(kotlin.Int, android.content.Context)net.sasa_nori.common_ktx.extension/kotlin.-int/get-pixel-offset.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getPixelSize(kotlin.Int, android.content.Context)net.sasa_nori.common_ktx.extension/kotlin.-int/get-pixel-size.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getPreferences(android.content.Context, kotlin.String)net.sasa_nori.common_ktx.extension/android.content.-context/get-preferences.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getString(android.widget.EditText)net.sasa_nori.common_ktx.extension/android.widget.-edit-text/get-string.html
+$dokka.location:net.sasa_nori.common_ktx.extension$getViewSize(android.view.View)net.sasa_nori.common_ktx.extension/android.view.-view/get-view-size.html
+$dokka.location:net.sasa_nori.common_ktx.extension$gone(android.view.View)net.sasa_nori.common_ktx.extension/android.view.-view/gone.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasAudioRecordPermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-audio-record-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasCalendarPermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-calendar-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasCameraCapturePermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-camera-capture-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasCameraPermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-camera-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasFile(kotlin.String)net.sasa_nori.common_ktx.extension/kotlin.-string/has-file.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasFilePermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-file-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasLocationPermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-location-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasMediaRecordPermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-media-record-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasMicPermission(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/has-mic-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasPermission(android.app.Activity, kotlin.Array((kotlin.String)))net.sasa_nori.common_ktx.extension/android.app.-activity/has-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasPermission(androidx.fragment.app.DialogFragment, kotlin.Array((kotlin.String)))net.sasa_nori.common_ktx.extension/androidx.fragment.app.-dialog-fragment/has-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasPermission(androidx.fragment.app.Fragment, kotlin.Array((kotlin.String)))net.sasa_nori.common_ktx.extension/androidx.fragment.app.-fragment/has-permission.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hasRuntimePermissions(android.content.Context, kotlin.Array((kotlin.String)))net.sasa_nori.common_ktx.extension/android.content.-context/has-runtime-permissions.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hideKeyboard(android.content.Context, android.view.View)net.sasa_nori.common_ktx.extension/android.content.-context/hide-keyboard.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hideKeyboard(android.view.View)net.sasa_nori.common_ktx.extension/android.view.-view/hide-keyboard.html
+$dokka.location:net.sasa_nori.common_ktx.extension$hour(java.util.Date, java.util.Locale)net.sasa_nori.common_ktx.extension/java.util.-date/hour.html
+$dokka.location:net.sasa_nori.common_ktx.extension$inVisible(android.view.View)net.sasa_nori.common_ktx.extension/android.view.-view/in-visible.html
+$dokka.location:net.sasa_nori.common_ktx.extension$inflate(android.view.ViewGroup, android.view.LayoutInflater, kotlin.Int, kotlin.Boolean)net.sasa_nori.common_ktx.extension/android.view.-view-group/inflate.html
+$dokka.location:net.sasa_nori.common_ktx.extension$initHiddenKeyboard(android.app.Activity)net.sasa_nori.common_ktx.extension/android.app.-activity/init-hidden-keyboard.html
+$dokka.location:net.sasa_nori.common_ktx.extension$isActiveNetwork(android.content.Context)net.sasa_nori.common_ktx.extension/android.content.-context/is-active-network.html
+$dokka.location:net.sasa_nori.common_ktx.extension$isInt(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.sasa_nori.common_ktx.extension/kotlin.-string/is-int.html
+$dokka.location:net.sasa_nori.common_ktx.extension$isMailAddress(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.sasa_nori.common_ktx.extension/kotlin.-string/is-mail-address.html
+$dokka.location:net.sasa_nori.common_ktx.extension$isNumber(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.sasa_nori.common_ktx.extension/kotlin.-string/is-number.html
+$dokka.location:net.sasa_nori.common_ktx.extension$isPhoneNumber(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.sasa_nori.common_ktx.extension/kotlin.-string/is-phone-number.html
+$dokka.location:net.sasa_nori.common_ktx.extension$isSuccessPermissionResult(kotlin.IntArray)net.sasa_nori.common_ktx.extension/kotlin.-int-array/is-success-permission-result.html
+$dokka.location:net.sasa_nori.common_ktx.extension$makeFile(kotlin.String)net.sasa_nori.common_ktx.extension/kotlin.-string/make-file.html
+$dokka.location:net.sasa_nori.common_ktx.extension$matchPattern(kotlin.String, kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.sasa_nori.common_ktx.extension/kotlin.-string/match-pattern.html
+$dokka.location:net.sasa_nori.common_ktx.extension$minute(java.util.Date, java.util.Locale)net.sasa_nori.common_ktx.extension/java.util.-date/minute.html
+$dokka.location:net.sasa_nori.common_ktx.extension$month(java.util.Date, java.util.Locale)net.sasa_nori.common_ktx.extension/java.util.-date/month.html
+$dokka.location:net.sasa_nori.common_ktx.extension$moveFile(kotlin.String, kotlin.String)net.sasa_nori.common_ktx.extension/kotlin.-string/move-file.html
+$dokka.location:net.sasa_nori.common_ktx.extension$onPermissionResult(kotlin.IntArray, net.sasa_nori.common_ktx.listener.PermissionListener)net.sasa_nori.common_ktx.extension/kotlin.-int-array/on-permission-result.html
+$dokka.location:net.sasa_nori.common_ktx.extension$recursiveDeleteFile(java.io.File)net.sasa_nori.common_ktx.extension/java.io.-file/recursive-delete-file.html
+$dokka.location:net.sasa_nori.common_ktx.extension$replaceFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/replace-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$replaceFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.fragment.app.-fragment/replace-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$replaceNowFragment(androidx.appcompat.app.AppCompatActivity, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/replace-now-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$replaceNowFragment(androidx.fragment.app.Fragment, kotlin.Int, androidx.fragment.app.Fragment, android.os.Bundle, kotlin.Boolean, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.fragment.app.-fragment/replace-now-fragment.html
+$dokka.location:net.sasa_nori.common_ktx.extension$requestLocation(android.content.Context, android.location.LocationListener, kotlin.Function0((kotlin.Unit)), android.location.Criteria, kotlin.Boolean, kotlin.Long, kotlin.Float)net.sasa_nori.common_ktx.extension/android.content.-context/request-location.html
+$dokka.location:net.sasa_nori.common_ktx.extension$resizeBitmap(android.net.Uri, android.content.Context, kotlin.Int, kotlin.Int)net.sasa_nori.common_ktx.extension/android.net.-uri/resize-bitmap.html
+$dokka.location:net.sasa_nori.common_ktx.extension$save(android.graphics.Bitmap, kotlin.String, android.graphics.Bitmap.CompressFormat, kotlin.Int, kotlin.Boolean)net.sasa_nori.common_ktx.extension/android.graphics.-bitmap/save.html
+$dokka.location:net.sasa_nori.common_ktx.extension$second(java.util.Date, java.util.Locale)net.sasa_nori.common_ktx.extension/java.util.-date/second.html
+$dokka.location:net.sasa_nori.common_ktx.extension$sendNotification(android.content.Context, kotlin.String, kotlin.Int, kotlin.String, android.app.PendingIntent, kotlin.String, kotlin.String, kotlin.Int, androidx.core.app.NotificationCompat.Style, android.graphics.Bitmap, kotlin.Int, kotlin.Boolean, kotlin.Boolean, kotlin.Boolean)net.sasa_nori.common_ktx.extension/android.content.-context/send-notification.html
+$dokka.location:net.sasa_nori.common_ktx.extension$setMargin(android.view.View, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)net.sasa_nori.common_ktx.extension/android.view.-view/set-margin.html
+$dokka.location:net.sasa_nori.common_ktx.extension$setMarginRes(android.view.View, kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int)net.sasa_nori.common_ktx.extension/android.view.-view/set-margin-res.html
+$dokka.location:net.sasa_nori.common_ktx.extension$setNotificationChannel(android.content.Context, kotlin.String, kotlin.String, kotlin.Int, kotlin.String)net.sasa_nori.common_ktx.extension/android.content.-context/set-notification-channel.html
+$dokka.location:net.sasa_nori.common_ktx.extension$setOnSingleClickListener(android.view.View, kotlin.Long, kotlin.Function1((android.view.View, kotlin.Unit)))net.sasa_nori.common_ktx.extension/android.view.-view/set-on-single-click-listener.html
+$dokka.location:net.sasa_nori.common_ktx.extension$showDialog(androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.DialogFragment, android.os.Bundle, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.appcompat.app.-app-compat-activity/show-dialog.html
+$dokka.location:net.sasa_nori.common_ktx.extension$showDialog(androidx.fragment.app.Fragment, androidx.fragment.app.DialogFragment, android.os.Bundle, kotlin.String)net.sasa_nori.common_ktx.extension/androidx.fragment.app.-fragment/show-dialog.html
+$dokka.location:net.sasa_nori.common_ktx.extension$showGallery(android.app.Activity, kotlin.Int)net.sasa_nori.common_ktx.extension/android.app.-activity/show-gallery.html
+$dokka.location:net.sasa_nori.common_ktx.extension$showKeyboard(android.widget.EditText, kotlin.Long)net.sasa_nori.common_ktx.extension/android.widget.-edit-text/show-keyboard.html
+$dokka.location:net.sasa_nori.common_ktx.extension$showToast(kotlin.String, android.content.Context, kotlin.Int)net.sasa_nori.common_ktx.extension/kotlin.-string/show-toast.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toBundleKey(kotlin.String, kotlin.Any)net.sasa_nori.common_ktx.extension/kotlin.-string/to-bundle-key.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toBundleValue(kotlin.Any, kotlin.String)net.sasa_nori.common_ktx.extension/kotlin.-any/to-bundle-value.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toDate(kotlin.String, kotlin.String, java.util.Locale)net.sasa_nori.common_ktx.extension/kotlin.-string/to-date.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toFormat(java.util.Date, kotlin.String, java.util.Locale)net.sasa_nori.common_ktx.extension/java.util.-date/to-format.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toJsonString(kotlin.Any, kotlin.Boolean)net.sasa_nori.common_ktx.extension/kotlin.-any/to-json-string.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toMapKey(kotlin.String, kotlin.Any)net.sasa_nori.common_ktx.extension/kotlin.-string/to-map-key.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toMapValue(kotlin.Any, kotlin.String)net.sasa_nori.common_ktx.extension/kotlin.-any/to-map-value.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toMutableMapKey(kotlin.String, kotlin.Any)net.sasa_nori.common_ktx.extension/kotlin.-string/to-mutable-map-key.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toMutableMapValue(kotlin.Any, kotlin.String)net.sasa_nori.common_ktx.extension/kotlin.-any/to-mutable-map-value.html
+$dokka.location:net.sasa_nori.common_ktx.extension$toSepia(android.graphics.Bitmap)net.sasa_nori.common_ktx.extension/android.graphics.-bitmap/to-sepia.html
+$dokka.location:net.sasa_nori.common_ktx.extension$visible(android.view.View)net.sasa_nori.common_ktx.extension/android.view.-view/visible.html
+$dokka.location:net.sasa_nori.common_ktx.extension$year(java.util.Date, java.util.Locale)net.sasa_nori.common_ktx.extension/java.util.-date/year.html
 net.newstyleservice.common_ktx
-net.newstyleservice.common_ktx.extension
-net.newstyleservice.common_ktx.listener
+net.sasa_nori.common_ktx
+net.sasa_nori.common_ktx.extension
+net.sasa_nori.common_ktx.listener
