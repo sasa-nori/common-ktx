@@ -6,7 +6,7 @@ import androidx.annotation.LayoutRes
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 
-fun Fragment.hasPermission(permissions: List<String>): Boolean =
+fun Fragment.hasPermission(permissions: Array<String>): Boolean =
     requireContext().hasRuntimePermissions(permissions)
 
 fun Fragment.showDialog(

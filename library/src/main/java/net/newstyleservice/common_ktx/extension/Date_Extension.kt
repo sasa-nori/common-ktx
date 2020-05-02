@@ -39,7 +39,7 @@ fun Date.hour(locale: Locale = Locale.getDefault()): Int {
     return calendar.get(Calendar.HOUR_OF_DAY)
 }
 
-fun Date.mnute(locale: Locale = Locale.getDefault()): Int {
+fun Date.minute(locale: Locale = Locale.getDefault()): Int {
     val calendar = Calendar.getInstance(locale)
     calendar.clear()
     calendar.time = this

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 
-fun Activity.hasPermission(permissions: List<String>): Boolean =
+fun Activity.hasPermission(permissions: Array<String>): Boolean =
     this.hasRuntimePermissions(permissions)
 
 fun AppCompatActivity.showDialog(
