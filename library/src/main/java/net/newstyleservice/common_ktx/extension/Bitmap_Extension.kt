@@ -1,7 +1,13 @@
 package net.newstyleservice.common_ktx.extension
 
+import android.Manifest
 import android.graphics.Bitmap
+import android.graphics.Bitmap.CompressFormat
 import android.graphics.Color
+import android.util.Log
+import androidx.annotation.RequiresPermission
+import java.io.File
+import java.io.FileOutputStream
 import kotlin.math.abs
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -29,4 +35,38 @@ fun Bitmap.toSepia(): Bitmap {
         pixels[i] = Color.rgb(red, green, blue)
     }
     return Bitmap.createBitmap(pixels, 0, width, width, height, Bitmap.Config.RGB_565)
+}
+
+/**
+ * Bitmap save
+ *
+ * @param filePath File Path
+ * @param format default: JPEG
+ * @param quality default: 100
+ * @param isErrorLog default: false
+ * @return true:File saved
+ */
+@RequiresPermission(
+    allOf = [Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE]
+)
+fun Bitmap.save(
+    filePath: String,
+    format: CompressFormat = Bitmap.CompressFormat.JPEG,
+    quality: Int = 100,
+    isErrorLog: Boolean = false
+): Boolean {
+    if (filePath.isEmpty()) return false
+
+    return try {
+        val imageFile = File(filePath)
+        val outputStream = FileOutputStream(imageFile)
+        compress(format, quality, outputStream)
+        outputStream.close()
+        imageFile.exists()
+    } catch (exception: Exception) {
+        if (isErrorLog) {
+            Log.w("bitmap save", exception.message, exception)
+        }
+        false
+    }
 }

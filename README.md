@@ -24,13 +24,15 @@ dependencies {
 }
 ```
 
-## Doc
+## Kdoc
 
-[Document markdown](./doc/library/index.md)
+[Document](https://sasa-nori.github.io/common-ktx/doc/library/)
 
-## Examples
+## Example
 
 [CommonKtx-Example](https://github.com/sasa-nori/CommonKtx-Example)
+
+## Tips
 
 ### Object to JSON String
 
@@ -50,6 +52,8 @@ data class Test(val first: String, val second: String)
 ```
 Test("first", "second").toJsonString()
 ```
+
+## Usage
 
 ### SingleClick
 
@@ -102,6 +106,15 @@ val isFirstLaunch = when (pref.isFirstLaunch) {
     else -> false
 }
 ```
+
+# Dependency
+
+* [Android X](https://developer.android.com/jetpack/androidx)
+* [Android Support](https://developer.android.com/topic/libraries/support-library)
+* [Moshi 1.9.2](https://github.com/square/moshi)
+* [OkHttp 3.14.7](https://github.com/square/okhttp/)
+* [Retrofit 2.8.1](https://github.com/square/retrofit)
+* [Kotlin Contributions 1.3.5](https://github.com/Kotlin/kotlinx.coroutines)
 
 # Licence
 
