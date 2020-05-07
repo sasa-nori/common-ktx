@@ -1,13 +1,18 @@
 package net.newstyleservice.common_ktx
 
 import android.content.Context
+import android.content.SharedPreferences
 import net.newstyleservice.common_ktx.extension.getPreferences
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-abstract class SharedPrefDelegated(context: Context) {
+abstract class SharedPrefDelegated(
+    private val context: Context,
+    private val fileName: String? = null
+) {
 
-    private val appPref = context.getPreferences()
+    private val appPref: SharedPreferences
+        get() = fileName?.let { context.getPreferences(name = it) } ?: context.getPreferences()
 
     protected fun <T : Any> pref(default: T) = object : ReadWriteProperty<SharedPrefDelegated, T> {
 
