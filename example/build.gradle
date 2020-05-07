@@ -41,7 +41,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // implementation project(":library")
-    implementation 'com.github.sasa-nori:common-ktx:1.0.8'
+    implementation 'com.github.sasa-nori:common-ktx:1.0.9'
     kapt "com.squareup.moshi:moshi-kotlin-codegen:1.9.2"
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
