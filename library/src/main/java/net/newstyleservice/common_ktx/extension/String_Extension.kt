@@ -3,7 +3,10 @@ package net.newstyleservice.common_ktx.extension
 import android.Manifest
 import android.content.Context
 import android.os.Bundle
+import android.security.keystore.KeyGenParameterSpec
+import android.security.keystore.KeyProperties
 import android.speech.tts.UtteranceProgressListener
+import android.util.Base64
 import android.widget.Toast
 import androidx.annotation.RequiresPermission
 import androidx.core.os.bundleOf
@@ -15,11 +18,26 @@ import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import java.io.ByteArrayInputStream
+import java.io.ByteArrayOutputStream
 import java.io.File
+import java.math.BigInteger
+import java.security.InvalidAlgorithmParameterException
+import java.security.KeyStore
+import java.security.NoSuchAlgorithmException
+import java.security.NoSuchProviderException
 import java.text.ParseException
 import java.text.SimpleDateFormat
+
 import java.util.Date
 import java.util.Locale
+import javax.crypto.Cipher
+import javax.crypto.CipherInputStream
+import javax.crypto.CipherOutputStream
+import javax.crypto.KeyGenerator
+import javax.crypto.SecretKey
+import javax.crypto.spec.IvParameterSpec
+import javax.security.auth.x500.X500Principal
 
 /**
  * String parse to Date
@@ -268,4 +286,105 @@ fun String.toSpeech(
     val ttsManager = TextToSpeechManager
     ttsManager.context = context
     return ttsManager.speech(this, utteranceProgressListener, pitchHeight, pitchRate)
+}
+
+fun String.encrypt(
+    alias: String,
+    ivKey: String = "",
+    keyProvider: String = "AndroidKeyStore",
+    isPrintError: Boolean = false
+): String? {
+    return try {
+        val keyStore = KeyStore.getInstance(keyProvider)
+        keyStore.load(null)
+        if (!keyStore.containsAlias(alias)) {
+            createAESKey(alias, keyProvider, isPrintError)
+        }
+        val secretKey: SecretKey = keyStore.getKey(alias, null) as SecretKey
+        val cipher = Cipher.getInstance(CIPHER_TRANSFORMATION_AES)
+        val ivParameterSpec = IvParameterSpec(ivKey.toByteArray())
+        cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec)
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        val cipherOutputStream = CipherOutputStream(byteArrayOutputStream, cipher)
+        cipherOutputStream.write(this.toByteArray())
+        cipherOutputStream.close()
+        Base64.encodeToString(byteArrayOutputStream.toByteArray(), Base64.NO_WRAP)
+    } catch (e: Exception) {
+        if (isPrintError) {
+            e.printStackTrace()
+        }
+        null
+    }
+}
+
+fun String.decrypt(
+    alias: String,
+    ivKey: String = "",
+    keyProvider: String = "AndroidKeyStore",
+    isPrintError: Boolean = false
+): String? {
+    return try {
+        val keyStore = KeyStore.getInstance(keyProvider)
+        keyStore.load(null)
+        val secretKey: SecretKey = keyStore.getKey(alias, null) as SecretKey? ?: return null
+
+        val cipher = Cipher.getInstance(CIPHER_TRANSFORMATION_AES)
+        val ivParameterSpec = IvParameterSpec(ivKey.toByteArray())
+        cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec)
+
+        val cipherInputStream = CipherInputStream(
+            ByteArrayInputStream(Base64.decode(this, Base64.NO_WRAP)),
+            cipher
+        )
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        var buffer: Int
+        do {
+            buffer = cipherInputStream.read()
+            if (buffer == -1) break
+            byteArrayOutputStream.write(buffer)
+        } while (true)
+        byteArrayOutputStream.close()
+        byteArrayOutputStream.toString("UTF-8")
+    } catch (e: Exception) {
+        if (isPrintError) {
+            e.printStackTrace()
+        }
+        null
+    }
+}
+
+private const val CIPHER_TRANSFORMATION_AES =
+    "${KeyProperties.KEY_ALGORITHM_AES}/${KeyProperties.BLOCK_MODE_CBC}/${KeyProperties.ENCRYPTION_PADDING_PKCS7}"
+
+private fun createAESKey(
+    alias: String,
+    keyProvider: String,
+    isPrintError: Boolean = false
+) {
+    runCatching {
+        val keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, keyProvider)
+        keyGenerator.init(
+            KeyGenParameterSpec.Builder(
+                alias,
+                KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT
+            )
+                .setCertificateSubject(X500Principal("CN=$alias"))
+                .setCertificateSerialNumber(BigInteger.ONE)
+                .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
+                .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)
+                .setRandomizedEncryptionRequired(false)
+                .build()
+        )
+
+        keyGenerator.generateKey()
+    }.exceptionOrNull()?.let {
+        when (it) {
+            is NoSuchProviderException,
+            is NoSuchAlgorithmException,
+            is InvalidAlgorithmParameterException -> {
+                if (!isPrintError) return
+                it.printStackTrace()
+            }
+        }
+    }
 }
