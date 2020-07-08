@@ -10,8 +10,10 @@ $dokka.location:net.newstyleservice.common_ktx.extension$createFullScreen(androi
 $dokka.location:net.newstyleservice.common_ktx.extension$createRetrofitService(kotlin.String, java.lang.Class((net.newstyleservice.common_ktx.extension.createRetrofitService.T)), okhttp3.OkHttpClient, retrofit2.Converter.Factory)net.newstyleservice.common_ktx.extension/kotlin.-string/create-retrofit-service.html
 $dokka.location:net.newstyleservice.common_ktx.extension$decimalText(kotlin.Int)net.newstyleservice.common_ktx.extension/kotlin.-int/decimal-text.html
 $dokka.location:net.newstyleservice.common_ktx.extension$decimalText(kotlin.Long)net.newstyleservice.common_ktx.extension/kotlin.-long/decimal-text.html
+$dokka.location:net.newstyleservice.common_ktx.extension$decrypt(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)net.newstyleservice.common_ktx.extension/kotlin.-string/decrypt.html
 $dokka.location:net.newstyleservice.common_ktx.extension$delete(androidx.fragment.app.DialogFragment)net.newstyleservice.common_ktx.extension/androidx.fragment.app.-dialog-fragment/delete.html
 $dokka.location:net.newstyleservice.common_ktx.extension$distanceBetween(android.location.Location, android.location.Location)net.newstyleservice.common_ktx.extension/android.location.-location/distance-between.html
+$dokka.location:net.newstyleservice.common_ktx.extension$encrypt(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)net.newstyleservice.common_ktx.extension/kotlin.-string/encrypt.html
 $dokka.location:net.newstyleservice.common_ktx.extension$getAlarmManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-alarm-manager.html
 $dokka.location:net.newstyleservice.common_ktx.extension$getColorCompat(android.content.Context, kotlin.Int)net.newstyleservice.common_ktx.extension/android.content.-context/get-color-compat.html
 $dokka.location:net.newstyleservice.common_ktx.extension$getConnectivityManager(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/get-connectivity-manager.html
@@ -31,6 +33,7 @@ $dokka.location:net.newstyleservice.common_ktx.extension$hasCameraCapturePermiss
 $dokka.location:net.newstyleservice.common_ktx.extension$hasCameraPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-camera-permission.html
 $dokka.location:net.newstyleservice.common_ktx.extension$hasFile(kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-string/has-file.html
 $dokka.location:net.newstyleservice.common_ktx.extension$hasFilePermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-file-permission.html
+$dokka.location:net.newstyleservice.common_ktx.extension$hasJapanese(kotlin.String, kotlin.String, kotlin.Function1((kotlin.String, kotlin.Unit)))net.newstyleservice.common_ktx.extension/kotlin.-string/has-japanese.html
 $dokka.location:net.newstyleservice.common_ktx.extension$hasLocationPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-location-permission.html
 $dokka.location:net.newstyleservice.common_ktx.extension$hasMediaRecordPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-media-record-permission.html
 $dokka.location:net.newstyleservice.common_ktx.extension$hasMicPermission(android.content.Context)net.newstyleservice.common_ktx.extension/android.content.-context/has-mic-permission.html
@@ -85,6 +88,7 @@ $dokka.location:net.newstyleservice.common_ktx.extension$toMapValue(kotlin.Any, 
 $dokka.location:net.newstyleservice.common_ktx.extension$toMutableMapKey(kotlin.String, kotlin.Any)net.newstyleservice.common_ktx.extension/kotlin.-string/to-mutable-map-key.html
 $dokka.location:net.newstyleservice.common_ktx.extension$toMutableMapValue(kotlin.Any, kotlin.String)net.newstyleservice.common_ktx.extension/kotlin.-any/to-mutable-map-value.html
 $dokka.location:net.newstyleservice.common_ktx.extension$toSepia(android.graphics.Bitmap)net.newstyleservice.common_ktx.extension/android.graphics.-bitmap/to-sepia.html
+$dokka.location:net.newstyleservice.common_ktx.extension$toSpeech(kotlin.String, android.content.Context, android.speech.tts.UtteranceProgressListener, kotlin.Float, kotlin.Float)net.newstyleservice.common_ktx.extension/kotlin.-string/to-speech.html
 $dokka.location:net.newstyleservice.common_ktx.extension$visible(android.view.View)net.newstyleservice.common_ktx.extension/android.view.-view/visible.html
 $dokka.location:net.newstyleservice.common_ktx.extension$year(java.util.Date, java.util.Locale)net.newstyleservice.common_ktx.extension/java.util.-date/year.html
 net.newstyleservice.common_ktx
