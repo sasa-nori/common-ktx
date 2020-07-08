@@ -3,12 +3,14 @@ package net.newstyleservice.common_ktx.extension
 import android.Manifest
 import android.content.Context
 import android.os.Bundle
+import android.speech.tts.UtteranceProgressListener
 import android.widget.Toast
 import androidx.annotation.RequiresPermission
 import androidx.core.os.bundleOf
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import net.newstyleservice.common_ktx.HttpClient
+import net.newstyleservice.common_ktx.TextToSpeechManager
 import okhttp3.OkHttpClient
 import retrofit2.Converter
 import retrofit2.Retrofit
@@ -180,6 +182,18 @@ fun String.isInt(errorMessage: String = "", error: ((String) -> Unit?)? = null):
 }
 
 /**
+ * Partial Matched Japanese
+ *
+ * @param errorMessage error message
+ * @param error response method
+ * @return true:partial matched
+ */
+fun String.hasJapanese(errorMessage: String = "", error: ((String) -> Unit?)? = null): Boolean {
+    val pattern = "[^0-9a-zA-Zぁ-んァ-ヶ一-龠々ー]"
+    return matchPattern(pattern, errorMessage, error)
+}
+
+/**
  * Show Toast
  *
  * @param context Context
@@ -234,4 +248,24 @@ fun <T> String.createRetrofitService(
         client?.also { client(it) }
         converterFactory?.also { addConverterFactory(it) }
     }.build().create(service)
+}
+
+/**
+ * Text To Speech
+ *
+ * @param context Context
+ * @param utteranceProgressListener UtteranceProgressListener
+ * @param pitchHeight pitch height : default 1.0
+ * @param pitchRate pitch rate : default 1.0
+ * @return
+ */
+fun String.toSpeech(
+    context: Context,
+    utteranceProgressListener: UtteranceProgressListener? = null,
+    pitchHeight: Float = 1.0f,
+    pitchRate: Float = 1.0f
+): TextToSpeechManager.Error {
+    val ttsManager = TextToSpeechManager
+    ttsManager.context = context
+    return ttsManager.speech(this, utteranceProgressListener, pitchHeight, pitchRate)
 }
