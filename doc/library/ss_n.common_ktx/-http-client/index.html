@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>HttpClient - library</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">library</a>&nbsp;/&nbsp;<a href="../index.html">ss_n.common_ktx</a>&nbsp;/&nbsp;<a href="./index.html">HttpClient</a><br/>
+<br/>
+<h1>HttpClient</h1>
+<code><span class="keyword">object </span><span class="identifier">HttpClient</span></code>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="client.html">client</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">client</span><span class="symbol">: </span><span class="identifier">OkHttpClient</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="default-client.html">defaultClient</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">defaultClient</span><span class="symbol">: </span><span class="identifier">OkHttpClient</span></code>
+<p>Tips: Timeout is 10s</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create-custom-client.html">createCustomClient</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createCustomClient</span><span class="symbol">(</span><span class="identifier" id="ss_n.common_ktx.HttpClient$createCustomClient(kotlin.Long, kotlin.Long, kotlin.Long)/connectTimeout">connectTimeout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;HTTP_TIME_OUT<span class="symbol">, </span><span class="identifier" id="ss_n.common_ktx.HttpClient$createCustomClient(kotlin.Long, kotlin.Long, kotlin.Long)/writeTimeout">writeTimeout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;HTTP_TIME_OUT<span class="symbol">, </span><span class="identifier" id="ss_n.common_ktx.HttpClient$createCustomClient(kotlin.Long, kotlin.Long, kotlin.Long)/readTimeout">readTimeout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>&nbsp;<span class="symbol">=</span>&nbsp;HTTP_TIME_OUT<span class="symbol">)</span><span class="symbol">: </span><span class="identifier">OkHttpClient</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../app.ss_n.common_ktx.extension/kotlin.-any/to-bundle-value.html">toBundleValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">toBundleValue</span><span class="symbol">(</span><span class="identifier" id="app.ss_n.common_ktx.extension$toBundleValue(kotlin.Any, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Bundle</span></code>
+<p>Create Bundle</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../app.ss_n.common_ktx.extension/kotlin.-any/to-json-string.html">toJsonString</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">toJsonString</span><span class="symbol">(</span><span class="identifier" id="app.ss_n.common_ktx.extension$toJsonString(kotlin.Any, kotlin.Boolean)/isLog">isLog</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code>
+<p>Object to Json String
+Must installed Moshi Code gen!!</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../app.ss_n.common_ktx.extension/kotlin.-any/to-map-value.html">toMapValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">toMapValue</span><span class="symbol">(</span><span class="identifier" id="app.ss_n.common_ktx.extension$toMapValue(kotlin.Any, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Create Map</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../app.ss_n.common_ktx.extension/kotlin.-any/to-mutable-map-value.html">toMutableMapValue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">.</span><span class="identifier">toMutableMapValue</span><span class="symbol">(</span><span class="identifier" id="app.ss_n.common_ktx.extension$toMutableMapValue(kotlin.Any, kotlin.String)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Create MutableMap</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
