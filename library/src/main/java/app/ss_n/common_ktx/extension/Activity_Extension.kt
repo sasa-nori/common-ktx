@@ -16,7 +16,7 @@ fun Activity.hasPermission(permissions: Array<String>): Boolean =
 fun AppCompatActivity.showDialog(
     dialog: DialogFragment,
     arg: Bundle? = null,
-    tag: String = dialog.javaClass.canonicalName.toString()
+    tag: String = dialog.javaClass.canonicalName ?: "showDialog"
 ) {
     arg?.let {
         dialog.arguments = arg

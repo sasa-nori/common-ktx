@@ -6,19 +6,6 @@ import org.junit.Test
 class AnyExtensionTest {
 
     @Test
-    fun toBundleValue() {
-        // given
-        val key = "key"
-        val value = "test"
-
-        // when
-        val bundle = value.toBundleValue(key)
-
-        // than
-        assertEquals(value, bundle[key])
-    }
-
-    @Test
     fun toMutableMapValue() {
         // given
         val key = "key"
