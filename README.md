@@ -2,6 +2,8 @@
 
 [![](https://jitpack.io/v/sasa-nori/common-ktx.svg)](https://jitpack.io/#sasa-nori/common-ktx)
 
+[![codecov](https://codecov.io/gh/sasa-nori/common-ktx/branch/develop/graph/badge.svg)](https://codecov.io/gh/sasa-nori/common-ktx)
+
 ## Prerequisites
 
 * must minSdkVersion is  23 over
