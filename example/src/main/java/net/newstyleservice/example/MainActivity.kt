@@ -4,26 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
+import app.ss_n.common_ktx.extension.setOnSingleClickListener
+import app.ss_n.common_ktx.observer.EventObserver
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.fab
 import kotlinx.android.synthetic.main.activity_main.toolbar
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import net.newstyleservice.common_ktx.HttpClient
-import net.newstyleservice.common_ktx.extension.createRetrofitService
-import net.newstyleservice.common_ktx.extension.setOnSingleClickListener
 
 class MainActivity : AppCompatActivity() {
 
-    private val apiService: ApiService by lazy {
-        URL.createRetrofitService(
-            service = ApiService::class.java,
-            client = HttpClient.createCustomClient()
-        )
-    }
+    private val mainViewModel by viewModels<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,20 +28,16 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.make(it, "Tapped count is ${pref.tapCount}", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
 
-                requestApi()
+                mainViewModel.requestApi()
             }
         }
-    }
 
-    private fun requestApi() = lifecycleScope.launch {
-        val result = withContext(Dispatchers.IO) {
-            apiService.getShikure()
-        }
-        result?.let {
-            it.forEach { shikure ->
+        // one shot event
+        mainViewModel.getShikureList().observe(this, EventObserver { shikureList ->
+            shikureList.forEach { shikure ->
                 Log.d("response content", shikure.content)
             }
-        }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -67,9 +54,5 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    companion object {
-        private const val URL = "https://mhf.newstyleservice.net"
     }
 }

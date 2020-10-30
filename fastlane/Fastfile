@@ -11,8 +11,8 @@ platform :android do
 
   desc "Runs all the Tests"
   lane :lint do
-    danger
     gradle(task: "library:test")
+    danger
   end
 
 end
