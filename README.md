@@ -109,6 +109,43 @@ val isFirstLaunch = when (pref.isFirstLaunch) {
 }
 ```
 
+### LiveData (One Shot Event)
+
+ 
+- ViewModel
+
+```
+class TestViewModel() : ViewModel {
+    private var testData = MutableLiveData<Event<String>>()
+
+    var testDataLiveData: LiveData<Event<String>>() = testData
+
+    fun postData() {
+        testData.postValue(Event("test"))
+    }
+
+}
+
+```
+
+- Activity
+
+```
+class TestActivity(): Activity {
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        testViewModel.testDataLiveData.observer(this, EventObserver {
+            Timber.d(it)
+        })
+    }
+}
+
+```
+
 # Dependency
 
 * [Android X](https://developer.android.com/jetpack/androidx)
@@ -121,7 +158,7 @@ val isFirstLaunch = when (pref.isFirstLaunch) {
 # Licence
 
 ```
-Copyright 2020 NewStyleService
+Copyright 2020 ss-n.app
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
