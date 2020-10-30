@@ -11,7 +11,7 @@ $dokka.location:app.ss_n.common_ktx.extension$createRetrofitService(kotlin.Strin
 $dokka.location:app.ss_n.common_ktx.extension$decimalText(kotlin.Int)app.ss_n.common_ktx.extension/kotlin.-int/decimal-text.html
 $dokka.location:app.ss_n.common_ktx.extension$decimalText(kotlin.Long)app.ss_n.common_ktx.extension/kotlin.-long/decimal-text.html
 $dokka.location:app.ss_n.common_ktx.extension$decrypt(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)app.ss_n.common_ktx.extension/kotlin.-string/decrypt.html
-$dokka.location:app.ss_n.common_ktx.extension$delete(androidx.fragment.app.DialogFragment)app.ss_n.common_ktx.extension/androidx.fragment.app.-dialog-fragment/delete.html
+$dokka.location:app.ss_n.common_ktx.extension$delete(androidx.fragment.app.DialogFragment, androidx.fragment.app.FragmentManager)app.ss_n.common_ktx.extension/androidx.fragment.app.-dialog-fragment/delete.html
 $dokka.location:app.ss_n.common_ktx.extension$distanceBetween(android.location.Location, android.location.Location)app.ss_n.common_ktx.extension/android.location.-location/distance-between.html
 $dokka.location:app.ss_n.common_ktx.extension$encrypt(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.Boolean)app.ss_n.common_ktx.extension/kotlin.-string/encrypt.html
 $dokka.location:app.ss_n.common_ktx.extension$getAlarmManager(android.content.Context)app.ss_n.common_ktx.extension/android.content.-context/get-alarm-manager.html
@@ -74,6 +74,7 @@ $dokka.location:app.ss_n.common_ktx.extension$showDialog(androidx.fragment.app.F
 $dokka.location:app.ss_n.common_ktx.extension$showGallery(android.app.Activity, kotlin.Int)app.ss_n.common_ktx.extension/android.app.-activity/show-gallery.html
 $dokka.location:app.ss_n.common_ktx.extension$showKeyboard(android.widget.EditText, kotlin.Long)app.ss_n.common_ktx.extension/android.widget.-edit-text/show-keyboard.html
 $dokka.location:app.ss_n.common_ktx.extension$showToast(kotlin.String, android.content.Context, kotlin.Int)app.ss_n.common_ktx.extension/kotlin.-string/show-toast.html
+$dokka.location:app.ss_n.common_ktx.extension$testObserver(androidx.lifecycle.LiveData((app.ss_n.common_ktx.extension.testObserver.T)))app.ss_n.common_ktx.extension/androidx.lifecycle.-live-data/test-observer.html
 $dokka.location:app.ss_n.common_ktx.extension$toBundleKey(kotlin.String, kotlin.Any)app.ss_n.common_ktx.extension/kotlin.-string/to-bundle-key.html
 $dokka.location:app.ss_n.common_ktx.extension$toBundleValue(kotlin.Any, kotlin.String)app.ss_n.common_ktx.extension/kotlin.-any/to-bundle-value.html
 $dokka.location:app.ss_n.common_ktx.extension$toCalender(java.util.Date, java.util.Locale)app.ss_n.common_ktx.extension/java.util.-date/to-calender.html
@@ -94,6 +95,6 @@ $dokka.location:app.ss_n.common_ktx.extension$toSpeech(kotlin.String, android.co
 $dokka.location:app.ss_n.common_ktx.extension$toYear(java.util.Date, java.util.Locale)app.ss_n.common_ktx.extension/java.util.-date/to-year.html
 $dokka.location:app.ss_n.common_ktx.extension$visible(android.view.View)app.ss_n.common_ktx.extension/android.view.-view/visible.html
 app.ss_n.common_ktx.extension
-net.newstyleservice.common_ktx
+app.ss_n.common_ktx.observer
 ss_n.common_ktx
 ss_n.common_ktx.listener
