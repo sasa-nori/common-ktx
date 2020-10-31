@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import app.ss_n.common_ktx.extension.inflate
-import app.ss_n.common_ktx.extension.setMarginRes
-import app.ss_n.common_ktx.extension.setOnSingleClickListener
 import kotlinx.android.synthetic.main.fragment_second.button_second
+import ss_n.common_ktx.extension.inflate
+import ss_n.common_ktx.extension.setMarginRes
+import ss_n.common_ktx.extension.setOnSingleClickListener
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
