@@ -6,11 +6,11 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import app.ss_n.common_ktx.extension.setOnSingleClickListener
-import app.ss_n.common_ktx.observer.EventObserver
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.fab
 import kotlinx.android.synthetic.main.activity_main.toolbar
+import ss_n.common_ktx.extension.setOnSingleClickListener
+import ss_n.common_ktx.observer.EventObserver
 
 class MainActivity : AppCompatActivity() {
 
