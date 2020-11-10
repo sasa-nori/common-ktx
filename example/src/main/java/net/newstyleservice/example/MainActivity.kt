@@ -9,12 +9,19 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.fab
 import kotlinx.android.synthetic.main.activity_main.toolbar
+import ss_n.common_ktx.extension.createRetrofitService
 import ss_n.common_ktx.extension.setOnSingleClickListener
 import ss_n.common_ktx.observer.EventObserver
 
 class MainActivity : AppCompatActivity() {
 
     private val mainViewModel by viewModels<MainViewModel>()
+
+    private val apiService: ApiService by lazy {
+        URL.createRetrofitService(
+            service = ApiService::class.java
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.make(it, "Tapped count is ${pref.tapCount}", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
 
-                mainViewModel.requestApi()
+                mainViewModel.requestApi(apiService)
             }
         }
 
@@ -54,5 +61,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    companion object {
+        const val URL = "https://mhf.newstyleservice.net"
     }
 }
