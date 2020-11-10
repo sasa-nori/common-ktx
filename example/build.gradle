@@ -41,18 +41,26 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //implementation project(":library")
-    implementation 'com.github.sasa-nori:common-ktx:1.1.2'
-    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.10.0"
+    implementation "com.github.sasa-nori:common-ktx:$libraryVersion"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     // unit test
-    testImplementation 'junit:junit:4.13.1'
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.1"
-    testImplementation "androidx.arch.core:core-testing:2.1.0"
-    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
-    testImplementation 'org.mockito:mockito-android:2.22.0'
-    testImplementation "com.google.truth:truth:1.1"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinCoroutinesTestVersion"
+    testImplementation "androidx.arch.core:core-testing:$archCoreTestingVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    testImplementation "org.mockito:mockito-android:$mockietAndroidVersion"
+    testImplementation "com.google.truth:truth:$truthVersion"
 }

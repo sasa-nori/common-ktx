@@ -4,6 +4,9 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
+import net.newstyleservice.example.api.ApiService
+import net.newstyleservice.example.api.Shikure
+import net.newstyleservice.example.view.MainViewModel
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -44,7 +47,7 @@ class MainViewModelTest {
         val liveDataTestObserver = target.getShikureList().testObserver()
 
         // when
-        target.requestApi(apiService)
+        target.requestApi()
 
         // than
         val result = liveDataTestObserver.observedValues.first()
