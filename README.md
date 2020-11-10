@@ -146,7 +146,7 @@ class TestActivity(): Activity {
 
 ### LiveData (Unit Test)
 
-see [MainViewModelTest.kt](https://github.com/sasa-nori/common-ktx/blob/develop/example/src/test/java/net/newstyleservice/example/MainViewModel.kt)
+see [MainViewModelTest.kt](https://github.com/sasa-nori/common-ktx/blob/develop/example/src/test/java/net/newstyleservice/example/MainViewModelTest.kt)
 
 ```
     @Test
