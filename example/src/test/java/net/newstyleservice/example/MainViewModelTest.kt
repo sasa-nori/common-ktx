@@ -14,7 +14,6 @@ import org.mockito.MockitoAnnotations
 import org.mockito.junit.MockitoJUnit
 import ss_n.common_ktx.extension.testObserver
 
-
 @ExperimentalCoroutinesApi
 class MainViewModelTest {
     @get:Rule
