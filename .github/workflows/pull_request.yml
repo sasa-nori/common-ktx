@@ -2,7 +2,7 @@ name: Android CI
 
 on:
   pull_request:
-    branches: [ develop ]
+    branches: [ develop, "feature*" ]
 
 jobs:
   build:
@@ -31,7 +31,3 @@ jobs:
           bundle exec fastlane lint
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: upload coverage
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
