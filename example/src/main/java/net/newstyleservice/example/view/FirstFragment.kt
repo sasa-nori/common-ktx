@@ -1,4 +1,4 @@
-package net.newstyleservice.example
+package net.newstyleservice.example.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_first.button_first
+import net.newstyleservice.example.R
+import net.newstyleservice.example.R.layout
 import ss_n.common_ktx.extension.inflate
 import ss_n.common_ktx.extension.setMargin
 import ss_n.common_ktx.extension.setOnSingleClickListener
@@ -21,7 +23,7 @@ class FirstFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return container?.inflate(layoutInflater = inflater, layout = R.layout.fragment_first)
+        return container?.inflate(layoutInflater = inflater, layout = layout.fragment_first)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

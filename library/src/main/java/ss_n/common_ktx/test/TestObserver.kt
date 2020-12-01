@@ -1,4 +1,4 @@
-package ss_n.common_ktx.observer
+package ss_n.common_ktx.test
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer

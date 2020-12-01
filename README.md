@@ -144,6 +144,27 @@ class TestActivity(): Activity {
 
 ```
 
+### LiveData (Unit Test)
+
+see [MainViewModelTest.kt](https://github.com/sasa-nori/common-ktx/blob/develop/example/src/test/java/net/newstyleservice/example/MainViewModelTest.kt)
+
+```
+    @Test
+    fun requestApi() = runBlocking {
+        // given
+        val answer = mutableListOf(Shikure(0, "", "", 0, 0))
+        `when`(apiService.getShikure()).thenReturn(answer)
+        val liveDataTestObserver = target.getShikureList().testObserver()
+
+        // when
+        target.requestApi(apiService)
+
+        // than
+        val result = liveDataTestObserver.observedValues.first()
+        assertThat(result?.getContentIfNotHandled()).isEqualTo(answer)
+    }
+```
+
 # Dependency
 
 * [Android X](https://developer.android.com/jetpack/androidx)

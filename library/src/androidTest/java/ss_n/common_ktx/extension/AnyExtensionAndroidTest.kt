@@ -1,6 +1,6 @@
-package app.ss_n.common_ktx.extension
+package ss_n.common_ktx.extension
 
-import org.junit.Assert.assertEquals
+import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 
 class AnyExtensionAndroidTest {
@@ -14,6 +14,6 @@ class AnyExtensionAndroidTest {
         val bundle = value.toBundleValue(key)
 
         // than
-        assertEquals(value, bundle[key])
+        assertThat(bundle[key]).isEqualTo(value)
     }
 }

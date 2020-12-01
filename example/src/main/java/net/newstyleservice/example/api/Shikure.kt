@@ -1,4 +1,4 @@
-package net.newstyleservice.example
+package net.newstyleservice.example.api
 
 import com.squareup.moshi.JsonClass
 

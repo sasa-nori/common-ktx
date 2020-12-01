@@ -122,9 +122,23 @@ internal class StringExtensionTest {
     }
 
     @Test
-    fun isInt() {
+    fun isInt_1() {
         // given
         val target = "12345678901"
+
+        // when
+        val result = target.isInt {
+            assert(false)
+        }
+
+        // than
+        assertTrue(result)
+    }
+
+    @Test
+    fun isInt_2() {
+        // given
+        val target = "12345"
 
         // when
         val result = target.isInt {
@@ -153,6 +167,20 @@ internal class StringExtensionTest {
     fun isInt_error_3() {
         // given
         val target = "abcde"
+
+        // when
+        val result = target.isInt {
+            assert(true)
+        }
+
+        // than
+        assertFalse(result)
+    }
+
+    @Test
+    fun isInt_error_4() {
+        // given
+        val target = "234abcde"
 
         // when
         val result = target.isInt {

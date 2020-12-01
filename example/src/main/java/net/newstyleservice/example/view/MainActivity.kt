@@ -1,24 +1,32 @@
-package net.newstyleservice.example
+package net.newstyleservice.example.view
 
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.fab
 import kotlinx.android.synthetic.main.activity_main.toolbar
+import net.newstyleservice.example.Preferences
+import net.newstyleservice.example.R
+import net.newstyleservice.example.R.id
+import net.newstyleservice.example.R.layout
+import net.newstyleservice.todologinbonus.di.ViewModelFactory
 import ss_n.common_ktx.extension.setOnSingleClickListener
 import ss_n.common_ktx.observer.EventObserver
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : InjectActivity() {
 
-    private val mainViewModel by viewModels<MainViewModel>()
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
+
+    private val mainViewModel by viewModels<MainViewModel> { viewModelFactory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(layout.activity_main)
         setSupportActionBar(toolbar)
 
         fab.setOnSingleClickListener { view ->
@@ -51,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
     }
