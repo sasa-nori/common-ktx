@@ -183,7 +183,7 @@ fun String.isPhoneNumber(errorMessage: String = "", error: ((String) -> Unit?)? 
  * @return true:matched
  */
 fun String.isNumber(errorMessage: String = "", error: ((String) -> Unit?)? = null): Boolean {
-    val pattern = "^[0-9].*?\$"
+    val pattern = "^[0-9]+\$"
     return matchPattern(pattern, errorMessage, error)
 }
 
@@ -195,7 +195,7 @@ fun String.isNumber(errorMessage: String = "", error: ((String) -> Unit?)? = nul
  * @return true:matched
  */
 fun String.isInt(errorMessage: String = "", error: ((String) -> Unit?)? = null): Boolean {
-    val pattern = "^[0-9]{11}\$"
+    val pattern = "^[0-9]{1,11}\$"
     return matchPattern(pattern, errorMessage, error)
 }
 
