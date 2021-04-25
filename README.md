@@ -77,7 +77,7 @@ button.setOnSingleClickListener(300, { view->
 ### Check RuntimePermission
 
 ```
-val permissions = arrayListOf(
+val permissions = arrayOf(
     Manifest.permission.READ_EXTERNAL_STORAGE,
     Manifest.permission.WRITE_EXTERNAL_STORAGE
 )
