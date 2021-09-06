@@ -77,7 +77,7 @@ button.setOnSingleClickListener(300, { view->
 ### Check RuntimePermission
 
 ```
-val permissions = arrayListOf(
+val permissions = arrayOf(
     Manifest.permission.READ_EXTERNAL_STORAGE,
     Manifest.permission.WRITE_EXTERNAL_STORAGE
 )
@@ -142,6 +142,32 @@ class TestActivity(): Activity {
     }
 }
 
+```
+
+### SoundPool
+
+```
+class TestActivity(): Activity {
+
+    private var soundPathList: MutableList<Int> = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(layout.activity_main)
+        setSupportActionBar(toolbar)
+
+        fab.setOnSingleClickListener { view ->
+            view?.let {
+                SoundPool.play(soundPathList.first())
+            }
+        }
+
+        lifecycleScope.launch {
+            soundPathList = loadSoundPool(mutableListOf(R.raw.one))
+        }
+    }
+
+}
 ```
 
 ### LiveData (Unit Test)

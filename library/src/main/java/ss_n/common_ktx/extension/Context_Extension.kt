@@ -27,6 +27,8 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.getSystemService
 import ss_n.common_ktx.Permissions
+import ss_n.common_ktx.SoundPool
+import kotlin.coroutines.suspendCoroutine
 
 fun Context.hasRuntimePermissions(permissions: Array<String>): Boolean {
     if (permissions.isEmpty()) return false
@@ -180,5 +182,13 @@ fun Context.requestLocation(
     val provider = locationManager.getBestProvider(criteria, enabledOnly)
     provider?.let {
         locationManager.requestLocationUpdates(it, minTime, minDistance, locationListener)
+    }
+}
+
+suspend fun Context.loadSoundPool(files: MutableList<Int>): MutableList<Int> {
+    return suspendCoroutine {
+        SoundPool.init(this, files) { list ->
+            it.resumeWith(Result.success(list))
+        }
     }
 }
