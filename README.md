@@ -144,6 +144,32 @@ class TestActivity(): Activity {
 
 ```
 
+### SoundPool
+
+```
+class TestActivity(): Activity {
+
+    private var soundPathList: MutableList<Int> = mutableListOf()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(layout.activity_main)
+        setSupportActionBar(toolbar)
+
+        fab.setOnSingleClickListener { view ->
+            view?.let {
+                SoundPool.play(soundPathList.first())
+            }
+        }
+
+        lifecycleScope.launch {
+            soundPathList = loadSoundPool(mutableListOf(R.raw.one))
+        }
+    }
+
+}
+```
+
 ### LiveData (Unit Test)
 
 see [MainViewModelTest.kt](https://github.com/sasa-nori/common-ktx/blob/develop/example/src/test/java/net/newstyleservice/example/MainViewModelTest.kt)

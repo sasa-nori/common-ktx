@@ -1,5 +1,6 @@
 package ss_n.common_ktx
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
@@ -11,6 +12,7 @@ import ss_n.common_ktx.TextToSpeechManager.Error.UNKNOWN
 import ss_n.common_ktx.extension.hasJapanese
 import java.util.Locale
 
+@SuppressLint("StaticFieldLeak")
 object TextToSpeechManager {
     var context: Context? = null
 
@@ -37,6 +39,7 @@ object TextToSpeechManager {
         get() = textToSpeech?.isLanguageAvailable(Locale.JAPAN)
             ?: TextToSpeech.LANG_MISSING_DATA >= TextToSpeech.LANG_AVAILABLE
 
+    @JvmStatic
     fun isSpeaking(): Boolean {
         return textToSpeech?.isSpeaking ?: false
     }
