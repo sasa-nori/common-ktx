@@ -118,6 +118,12 @@ ktlint {
     }
 }
 
-dokka {
-    outputDirectory = "../doc"
+// https://kotlin.github.io/dokka/1.4.0/user_guide/gradle/usage/
+dokkaHtml.configure {
+    outputDirectory.set(file("./doc"))
+    dokkaSourceSets {
+        configureEach {
+            jdkVersion.set(8)
+        }
+    }
 }
