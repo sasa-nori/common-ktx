@@ -6,10 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_first.button_first
 import net.newstyleservice.example.R
-import net.newstyleservice.example.R.layout
-import ss_n.common_ktx.extension.inflate
+import net.newstyleservice.example.databinding.FragmentFirstBinding
 import ss_n.common_ktx.extension.setMargin
 import ss_n.common_ktx.extension.setOnSingleClickListener
 
@@ -18,18 +16,21 @@ import ss_n.common_ktx.extension.setOnSingleClickListener
  */
 class FirstFragment : Fragment() {
 
+    private lateinit var binding: FragmentFirstBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return container?.inflate(layoutInflater = inflater, layout = layout.fragment_first)
+    ): View {
+        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        button_first.setMargin(top = 100)
-        button_first.setOnSingleClickListener {
+        binding.buttonFirst.setMargin(top = 100)
+        binding.buttonFirst.setOnSingleClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }

@@ -5,15 +5,15 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.fab
-import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.coroutines.launch
 import net.newstyleservice.example.Preferences
 import net.newstyleservice.example.R
 import net.newstyleservice.example.R.id
 import net.newstyleservice.example.R.layout
+import net.newstyleservice.example.databinding.ActivityMainBinding
 import net.newstyleservice.todologinbonus.di.ViewModelFactory
 import ss_n.common_ktx.SoundPool
 import ss_n.common_ktx.extension.loadSoundPool
@@ -26,16 +26,17 @@ class MainActivity : InjectActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
 
+    private lateinit var binding: ActivityMainBinding
     private val mainViewModel by viewModels<MainViewModel> { viewModelFactory }
 
     private var soundPathList: MutableList<Int> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_main)
-        setSupportActionBar(toolbar)
+        binding = DataBindingUtil.setContentView(this, layout.activity_main)
+        setSupportActionBar(binding.toolbar)
 
-        fab.setOnSingleClickListener { view ->
+        binding.fab.setOnSingleClickListener { view ->
             view?.let {
                 val pref = Preferences(this)
                 pref.tapCount++
