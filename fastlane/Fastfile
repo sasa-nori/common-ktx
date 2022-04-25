@@ -10,9 +10,8 @@ platform :android do
   end
 
   desc "Runs all the Tests"
-  lane :lint do
+  lane :unit_test do
     gradle(task: "library:test")
-    danger
   end
 
 end
