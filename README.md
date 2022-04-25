@@ -12,7 +12,7 @@
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
@@ -26,7 +26,7 @@ dependencies {
 
 ## Kdoc
 
-[Document](https://sasa-nori.github.io/common-ktx/doc/library/)
+[Document](https://sasa-nori.github.io/common-ktx/)
 
 ## Example
 
