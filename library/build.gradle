@@ -1,13 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
 apply plugin: "org.jlleitschuh.gradle.ktlint-idea"
 apply plugin: 'kotlin-kapt'
 apply plugin: 'org.jetbrains.dokka'
-
-group = 'app.ss-n'
-version = "$libraryVersion"
 
 android {
     compileSdkVersion 31
@@ -80,28 +77,18 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2'
 }
 
-// Build a jar with source files.
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    failOnError false
-    source = android.sourceSets.main.java.sourceFiles
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    classpath += configurations.compile
-}
-
-// Build a jar with javadoc.
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-artifacts {
-    archives sourcesJar
-    archives javadocJar
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'app.ss-n'
+                artifactId = 'common-ktx'
+                version = "$libraryVersion"
+            }
+        }
+    }
 }
 
 ktlint {
@@ -119,8 +106,8 @@ ktlint {
 }
 
 // https://kotlin.github.io/dokka/1.4.0/user_guide/gradle/usage/
-dokkaHtml.configure {
-    outputDirectory.set(file("../doc"))
+dokkaGfm.configure {
+    outputDirectory.set(file("../docs"))
     dokkaSourceSets {
         configureEach {
             jdkVersion.set(8)
