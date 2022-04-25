@@ -2,18 +2,17 @@ package net.newstyleservice.example.view
 
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.fab
-import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.coroutines.launch
 import net.newstyleservice.example.Preferences
 import net.newstyleservice.example.R
 import net.newstyleservice.example.R.id
-import net.newstyleservice.example.R.layout
+import net.newstyleservice.example.databinding.ActivityMainBinding
 import net.newstyleservice.todologinbonus.di.ViewModelFactory
 import ss_n.common_ktx.SoundPool
 import ss_n.common_ktx.extension.loadSoundPool
@@ -28,14 +27,18 @@ class MainActivity : InjectActivity() {
 
     private val mainViewModel by viewModels<MainViewModel> { viewModelFactory }
 
+    private val binding by lazy {
+        ActivityMainBinding.inflate(LayoutInflater.from(this))
+    }
+
     private var soundPathList: MutableList<Int> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_main)
-        setSupportActionBar(toolbar)
+        setContentView(binding.toolbar)
+        setSupportActionBar(binding.toolbar)
 
-        fab.setOnSingleClickListener { view ->
+        binding.fab.setOnSingleClickListener { view ->
             view?.let {
                 val pref = Preferences(this)
                 pref.tapCount++
