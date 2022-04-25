@@ -5,10 +5,12 @@ github.dismiss_out_of_range_messages
 has_label_wip = github.pr_title.match(/wip/i) || github.pr_labels.include?('wip') || github.pr_labels.include?('Wip') || github.pr_labels.include?('WIP')
 
 #Android Lint
-android_lint.gradle_task = "library:lint"
-android_lint.report_file = "library/build/reports/lint-results.xml"
+android_lint.skip_gradle_task = true
 android_lint.filtering = true
-android_lint.lint(inline_mode: true)
+Dir["library/build/reports/lint-results.xml"].each do |file|
+  android_lint.report_file = file
+  android_lint.lint(inline_mode: true)
+end
 
 # ktlint
 ktlint.lint(inline_mode: true)
