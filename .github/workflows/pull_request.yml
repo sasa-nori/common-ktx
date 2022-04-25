@@ -26,12 +26,8 @@ jobs:
           curl -sSLO https://github.com/pinterest/ktlint/releases/download/0.36.0/ktlint
           chmod a+x ktlint
           sudo mv ktlint /usr/local/bin/
-      - name: Run Danger
-        uses: danger/kotlin@1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Unit Test
         run: |
           bundle exec fastlane unit_test
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKENCI }}
