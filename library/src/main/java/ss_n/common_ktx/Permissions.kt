@@ -8,31 +8,19 @@ enum class Permissions(val permissions: Array<String>) {
      * [Manifest.permission.READ_MEDIA_IMAGES]
      */
     @RequiresApi(33)
-    IMAGE_READ(
-        arrayOf(
-            Manifest.permission.READ_MEDIA_IMAGES,
-        )
-    ),
+    IMAGE_READ(arrayOf(Manifest.permission.READ_MEDIA_IMAGES)),
 
     /**
      * [Manifest.permission.READ_MEDIA_VIDEO]
      */
     @RequiresApi(33)
-    MOVIE_READ(
-        arrayOf(
-            Manifest.permission.READ_MEDIA_VIDEO,
-        )
-    ),
+    MOVIE_READ(arrayOf(Manifest.permission.READ_MEDIA_VIDEO)),
 
     /**
      * [Manifest.permission.READ_MEDIA_AUDIO]
      */
     @RequiresApi(33)
-    AUDIO_READ(
-        arrayOf(
-            Manifest.permission.READ_MEDIA_AUDIO,
-        )
-    ),
+    AUDIO_READ(arrayOf(Manifest.permission.READ_MEDIA_AUDIO)),
 
     /**
      * [Manifest.permission.READ_MEDIA_IMAGES]
@@ -136,7 +124,5 @@ enum class Permissions(val permissions: Array<String>) {
      * [Manifest.permission.POST_NOTIFICATIONS]
      */
     @RequiresApi(33)
-    NOTIFICATION(
-        arrayOf(Manifest.permission.POST_NOTIFICATIONS)
-    )
+    NOTIFICATION(arrayOf(Manifest.permission.POST_NOTIFICATIONS))
 }
