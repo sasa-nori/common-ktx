@@ -62,6 +62,22 @@ fun Context.hasMicPermission(): Boolean =
 fun Context.hasCalendarPermission(): Boolean =
     hasRuntimePermissions(Permissions.CALENDER.permissions)
 
+@RequiresApi(33)
+fun Context.hasNotificationPermission(): Boolean =
+    hasRuntimePermissions(Permissions.NOTIFICATION.permissions)
+
+@RequiresApi(33)
+fun Context.hasReadImagePermission(): Boolean =
+    hasRuntimePermissions(Permissions.IMAGE_READ.permissions)
+
+@RequiresApi(33)
+fun Context.hasReadMoviePermission(): Boolean =
+    hasRuntimePermissions(Permissions.MOVIE_READ.permissions)
+
+@RequiresApi(33)
+fun Context.hasReadAudioPermission(): Boolean =
+    hasRuntimePermissions(Permissions.AUDIO_READ.permissions)
+
 fun Context.getPreferences(name: String = "shared_pref"): SharedPreferences =
     getSharedPreferences(name, Context.MODE_PRIVATE)
 
@@ -99,9 +115,11 @@ fun Context.isActiveNetwork(): Boolean {
 /**
  * Hide to Keyboard
  */
-fun Context.hideKeyboard(view: View) {
-    getInputMethodManager().hideSoftInputFromWindow(view.windowToken, 0)
-    view.clearFocus()
+fun Context.hideKeyboard(view: View?) {
+    view?.let {
+        getInputMethodManager().hideSoftInputFromWindow(it.windowToken, 0)
+        it.clearFocus()
+    }
 }
 
 @RequiresApi(api = VERSION_CODES.O)
