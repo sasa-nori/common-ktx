@@ -1,5 +1,6 @@
 package net.newstyleservice.example.view
 
+import android.os.Build.VERSION
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,8 +15,11 @@ import net.newstyleservice.example.R
 import net.newstyleservice.example.R.id
 import net.newstyleservice.example.databinding.ActivityMainBinding
 import net.newstyleservice.todologinbonus.di.ViewModelFactory
+import ss_n.common_ktx.Permissions
 import ss_n.common_ktx.SoundPool
+import ss_n.common_ktx.extension.hasNotificationPermission
 import ss_n.common_ktx.extension.loadSoundPool
+import ss_n.common_ktx.extension.setNotificationChannel
 import ss_n.common_ktx.extension.setOnSingleClickListener
 import ss_n.common_ktx.observer.EventObserver
 import javax.inject.Inject
@@ -35,7 +39,7 @@ class MainActivity : InjectActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.toolbar)
+        setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnSingleClickListener { view ->
@@ -61,6 +65,7 @@ class MainActivity : InjectActivity() {
         lifecycleScope.launch {
             soundPathList = loadSoundPool(mutableListOf(R.raw.one))
         }
+        showNotificationRuntimePermission()
     }
 
     override fun onDestroy() {
@@ -81,6 +86,16 @@ class MainActivity : InjectActivity() {
         return when (item.itemId) {
             id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun showNotificationRuntimePermission() {
+        if (VERSION.SDK_INT >= 33) {
+            if (hasNotificationPermission()) return
+            // No authorization alert without creating a channel.
+            // チャンネル作成をしないと権限アラートが出ない
+            setNotificationChannel("testApp", "testNotification")
+            requestPermissions(Permissions.NOTIFICATION.permissions, 1000)
         }
     }
 }

@@ -3,7 +3,7 @@
 # hideKeyboard
 
 [androidJvm]\
-fun [Context](https://developer.android.com/reference/kotlin/android/content/Context.html).[hideKeyboard](hide-keyboard.md)(view: [View](https://developer.android.com/reference/kotlin/android/view/View.html))
+fun [Context](https://developer.android.com/reference/kotlin/android/content/Context.html).[hideKeyboard](hide-keyboard.md)(view: [View](https://developer.android.com/reference/kotlin/android/view/View.html)?)
 
 fun [View](https://developer.android.com/reference/kotlin/android/view/View.html).[hideKeyboard](hide-keyboard.md)()
 
