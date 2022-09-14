@@ -32,7 +32,7 @@ enum class Permissions(val permissions: Array<String>) {
         arrayOf(
             Manifest.permission.READ_MEDIA_IMAGES,
             Manifest.permission.READ_MEDIA_VIDEO,
-            Manifest.permission.READ_MEDIA_AUDIO,
+            Manifest.permission.READ_MEDIA_AUDIO
         )
     ),
 
