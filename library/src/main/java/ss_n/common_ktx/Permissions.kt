@@ -1,8 +1,41 @@
 package ss_n.common_ktx
 
 import android.Manifest
+import androidx.annotation.RequiresApi
 
 enum class Permissions(val permissions: Array<String>) {
+    /**
+     * [Manifest.permission.READ_MEDIA_IMAGES]
+     */
+    @RequiresApi(33)
+    IMAGE_READ(arrayOf(Manifest.permission.READ_MEDIA_IMAGES)),
+
+    /**
+     * [Manifest.permission.READ_MEDIA_VIDEO]
+     */
+    @RequiresApi(33)
+    MOVIE_READ(arrayOf(Manifest.permission.READ_MEDIA_VIDEO)),
+
+    /**
+     * [Manifest.permission.READ_MEDIA_AUDIO]
+     */
+    @RequiresApi(33)
+    AUDIO_READ(arrayOf(Manifest.permission.READ_MEDIA_AUDIO)),
+
+    /**
+     * [Manifest.permission.READ_MEDIA_IMAGES]
+     * [Manifest.permission.READ_MEDIA_VIDEO]
+     * [Manifest.permission.READ_MEDIA_AUDIO]
+     */
+    @RequiresApi(33)
+    READ_MEDIA(
+        arrayOf(
+            Manifest.permission.READ_MEDIA_IMAGES,
+            Manifest.permission.READ_MEDIA_VIDEO,
+            Manifest.permission.READ_MEDIA_AUDIO
+        )
+    ),
+
     /**
      * [Manifest.permission.READ_EXTERNAL_STORAGE]
      * [Manifest.permission.WRITE_EXTERNAL_STORAGE]
@@ -85,5 +118,11 @@ enum class Permissions(val permissions: Array<String>) {
             Manifest.permission.READ_CALENDAR,
             Manifest.permission.WRITE_CALENDAR
         )
-    )
+    ),
+
+    /**
+     * [Manifest.permission.POST_NOTIFICATIONS]
+     */
+    @RequiresApi(33)
+    NOTIFICATION(arrayOf(Manifest.permission.POST_NOTIFICATIONS))
 }
