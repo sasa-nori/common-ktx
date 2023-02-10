@@ -2,7 +2,9 @@ name: Release Drafter
 
 on:
   push:
-    branches: [ develop, "feature*" ]
+    branches:
+      - develop
+      - "feature*"
 
 jobs:
   update_release_draft:
