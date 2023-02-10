@@ -13,4 +13,4 @@ fun [Context](https://developer.android.com/reference/kotlin/android/content/Con
         isCostAllowed = true
         horizontalAccuracy = Criteria.ACCURACY_HIGH
         verticalAccuracy = Criteria.ACCURACY_HIGH
-    }, enabledOnly: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true, minTime: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = 1000, minDistance: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 40f)
+    }, enabledOnly: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true, minTime: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = 1000, minDistance: [Float](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) = 40.0f)

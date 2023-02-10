@@ -5,6 +5,12 @@
 [androidJvm]\
 class [EventObserver](index.md)&lt;[T](index.md)&gt;(onEventUnhandledContent: ([T](index.md)) -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)) : [Observer](https://developer.android.com/reference/kotlin/androidx/lifecycle/Observer.html)&lt;[Event](../-event/index.md)&lt;[T](index.md)&gt;&gt;
 
+## Constructors
+
+| | |
+|---|---|
+| [EventObserver](-event-observer.md) | [androidJvm]<br>fun &lt;[T](index.md)&gt; [EventObserver](-event-observer.md)(onEventUnhandledContent: ([T](index.md)) -&gt; [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)) |
+
 ## Functions
 
 | Name | Summary |
