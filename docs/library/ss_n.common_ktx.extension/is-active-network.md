@@ -4,6 +4,6 @@
 
 [androidJvm]\
 
-@[RequiresPermission](https://developer.android.com/reference/kotlin/androidx/annotation/RequiresPermission.html)(value = "android.permission.ACCESS_NETWORK_STATE")
+@[RequiresPermission](https://developer.android.com/reference/kotlin/androidx/annotation/RequiresPermission.html)(value = &quot;android.permission.ACCESS_NETWORK_STATE&quot;)
 
 fun [Context](https://developer.android.com/reference/kotlin/android/content/Context.html).[isActiveNetwork](is-active-network.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)

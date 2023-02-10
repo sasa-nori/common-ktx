@@ -3,4 +3,4 @@
 # getPreferences
 
 [androidJvm]\
-fun [Context](https://developer.android.com/reference/kotlin/android/content/Context.html).[getPreferences](get-preferences.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = "shared_pref"): [SharedPreferences](https://developer.android.com/reference/kotlin/android/content/SharedPreferences.html)
+fun [Context](https://developer.android.com/reference/kotlin/android/content/Context.html).[getPreferences](get-preferences.md)(name: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;shared_pref&quot;): [SharedPreferences](https://developer.android.com/reference/kotlin/android/content/SharedPreferences.html)

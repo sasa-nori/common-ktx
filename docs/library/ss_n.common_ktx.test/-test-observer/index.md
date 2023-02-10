@@ -5,6 +5,12 @@
 [androidJvm]\
 class [TestObserver](index.md)&lt;[T](index.md)&gt; : [Observer](https://developer.android.com/reference/kotlin/androidx/lifecycle/Observer.html)&lt;[T](index.md)&gt;
 
+## Constructors
+
+| | |
+|---|---|
+| [TestObserver](-test-observer.md) | [androidJvm]<br>fun [TestObserver](-test-observer.md)() |
+
 ## Functions
 
 | Name | Summary |
