@@ -74,9 +74,9 @@ dependencies {
     testImplementation "org.mockito:mockito-android:$mockietAndroidVersion"
     testImplementation "com.google.truth:truth:$truthVersion"
 
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    androidTestImplementation "com.google.truth:truth:1.1"
+    androidTestImplementation "com.google.truth:truth:1.1.3"
 
     implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2'
 }
