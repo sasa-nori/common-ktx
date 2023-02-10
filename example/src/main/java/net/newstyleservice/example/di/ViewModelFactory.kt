@@ -1,4 +1,4 @@
-package net.newstyleservice.todologinbonus.di
+package net.newstyleservice.example.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -21,7 +21,7 @@ class ViewModelFactory @Inject constructor(
                 }
             }
         }
-        if (creator == null) throw IllegalArgumentException("unknown model class " + modelClass)
+        if (creator == null) throw IllegalArgumentException("unknown model class $modelClass")
         try {
             return creator.get() as T
         } catch (e: Exception) {

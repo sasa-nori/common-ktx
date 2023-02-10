@@ -51,7 +51,7 @@ fun Bitmap.toSepia(): Bitmap {
 )
 fun Bitmap.save(
     filePath: String,
-    format: CompressFormat = Bitmap.CompressFormat.JPEG,
+    format: CompressFormat = CompressFormat.JPEG,
     quality: Int = 100,
     isErrorLog: Boolean = false
 ): Boolean {
