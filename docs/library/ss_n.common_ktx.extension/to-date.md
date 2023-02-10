@@ -3,7 +3,7 @@
 # toDate
 
 [androidJvm]\
-fun [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html).[toDate](to-date.md)(pattern: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = "yyyy/MM/dd HH:mm:ss", locale: [Locale](https://developer.android.com/reference/kotlin/java/util/Locale.html) = Locale.getDefault()): [Date](https://developer.android.com/reference/kotlin/java/util/Date.html)?
+fun [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html).[toDate](to-date.md)(pattern: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) = &quot;yyyy/MM/dd HH:mm:ss&quot;, locale: [Locale](https://developer.android.com/reference/kotlin/java/util/Locale.html) = Locale.getDefault()): [Date](https://developer.android.com/reference/kotlin/java/util/Date.html)?
 
 String parse to Date
 
@@ -17,5 +17,5 @@ androidJvm
 
 | | |
 |---|---|
-| pattern | default = "yyyy/MM/dd HH:mm:ss" |
+| pattern | default = &quot;yyyy/MM/dd HH:mm:ss&quot; |
 | locale | default = device default |

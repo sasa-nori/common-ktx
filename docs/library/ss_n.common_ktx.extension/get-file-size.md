@@ -4,7 +4,7 @@
 
 [androidJvm]\
 
-@[RequiresPermission](https://developer.android.com/reference/kotlin/androidx/annotation/RequiresPermission.html)(allOf = ["android.permission.WRITE_EXTERNAL_STORAGE", "android.permission.READ_EXTERNAL_STORAGE"])
+@[RequiresPermission](https://developer.android.com/reference/kotlin/androidx/annotation/RequiresPermission.html)(allOf = [&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;, &quot;android.permission.READ_EXTERNAL_STORAGE&quot;])
 
 fun [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html).[getFileSize](get-file-size.md)(sizeFormat: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = 1024): [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html)
 
