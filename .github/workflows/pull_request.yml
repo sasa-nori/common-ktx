@@ -15,10 +15,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Set up Ruby 2.6.10
+      - name: Set up Ruby 2.6.0
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.10
+          ruby-version: 2.6.0
       - name: Install
         run: |
           gem install bundler
