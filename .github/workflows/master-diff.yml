@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  master-to-develop-pr-auto-creator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check change
+        run: |
+          git fetch
+          echo "::set-output name=CHANGED::$(git diff --name-only "origin/develop" "origin/master" -- | wc -l | awk '{print $1}')"
+          echo "::set-output name=COMMIT_HASH::$(git rev-parse HEAD)"
+        id: check-change
+
+      - name: Create branch
+        if: ${{ steps.check-change.outputs.CHANGED > 0 }}
+        run: |
+          git checkout -b "fix/${{ steps.check-change.outputs.COMMIT_HASH }}"
+          git push origin "fix/${{ steps.check-change.outputs.COMMIT_HASH }}"
+      - name: Create pull-request
+        if: ${{ steps.check-change.outputs.CHANGED > 0 }}
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "fix/${{ steps.check-change.outputs.COMMIT_HASH }}"
+          destination_branch: "develop"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "Merge diff of Master for Develop"
+          pr_body: "Auto Create PR"
+          pr_label: "master-diff"
