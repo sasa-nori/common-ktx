@@ -15,7 +15,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-          cache: 'gradle'
       - name: Set up Ruby 2.6.0
         uses: ruby/setup-ruby@v1
         with:
