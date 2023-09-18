@@ -37,6 +37,7 @@ android {
     buildFeatures {
         dataBinding = true
     }
+    namespace 'net.newstyleservice.example'
 }
 
 dependencies {

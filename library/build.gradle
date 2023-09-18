@@ -40,6 +40,7 @@ android {
                 '-Xjvm-default=enable'
         ]
     }
+    namespace 'ss_n.common_ktx'
 }
 
 dependencies {
