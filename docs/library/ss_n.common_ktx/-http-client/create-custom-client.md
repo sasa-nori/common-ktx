@@ -3,4 +3,4 @@
 # createCustomClient
 
 [androidJvm]\
-fun [createCustomClient](create-custom-client.md)(connectTimeout: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = HTTP_TIME_OUT, writeTimeout: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = HTTP_TIME_OUT, readTimeout: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = HTTP_TIME_OUT): OkHttpClient
+fun [createCustomClient](create-custom-client.md)(connectTimeout: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = HTTP_TIME_OUT, writeTimeout: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = HTTP_TIME_OUT, readTimeout: [Long](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html) = HTTP_TIME_OUT, isShowLog: [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) = true, logLevel: HttpLoggingInterceptor.Level = BODY): OkHttpClient

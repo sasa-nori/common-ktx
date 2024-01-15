@@ -14,7 +14,7 @@ import net.newstyleservice.example.Preferences
 import net.newstyleservice.example.R
 import net.newstyleservice.example.R.id
 import net.newstyleservice.example.databinding.ActivityMainBinding
-import net.newstyleservice.todologinbonus.di.ViewModelFactory
+import net.newstyleservice.example.di.ViewModelFactory
 import ss_n.common_ktx.Permissions
 import ss_n.common_ktx.SoundPool
 import ss_n.common_ktx.extension.hasNotificationPermission

@@ -14,6 +14,6 @@ class AnyExtensionAndroidTest {
         val bundle = value.toBundleValue(key)
 
         // than
-        assertThat(bundle[key]).isEqualTo(value)
+        assertThat(bundle.getString(key)).isEqualTo(value)
     }
 }

@@ -3,4 +3,10 @@
 # SharedPrefDelegated
 
 [androidJvm]\
-abstract class [SharedPrefDelegated](index.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), fileName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)?)
+abstract class [SharedPrefDelegated](index.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), fileName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null)
+
+## Constructors
+
+| | |
+|---|---|
+| [SharedPrefDelegated](-shared-pref-delegated.md) | [androidJvm]<br>fun [SharedPrefDelegated](-shared-pref-delegated.md)(context: [Context](https://developer.android.com/reference/kotlin/android/content/Context.html), fileName: [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)? = null) |
