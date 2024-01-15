@@ -16,10 +16,10 @@ jobs:
         with:
           java-version: 17
           cache: 'gradle'
-      - name: Set up Ruby 2.6.0
+      - name: Set up Ruby 2.7.0
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.0
+          ruby-version: 2.7.0
           bundler-cache: true
       - name: Install
         run: |
