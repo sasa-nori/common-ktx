@@ -25,4 +25,4 @@ end
 
 # LGTM Image
 
-lgtm.check_lgtm
+lgtm.check_lgtm image_url: 'https://user-images.githubusercontent.com/40590821/137703484-e438c706-6598-434e-bd60-d656cc203043.png'
