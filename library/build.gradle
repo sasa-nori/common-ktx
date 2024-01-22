@@ -80,7 +80,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "com.google.truth:truth:1.2.0"
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.11.0'
 }
 
 afterEvaluate {
