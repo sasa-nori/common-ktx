@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'maven-publish'
     id "org.jlleitschuh.gradle.ktlint"
-    id "org.jlleitschuh.gradle.ktlint-idea"
     id 'org.jetbrains.dokka'
     id "com.google.devtools.ksp"
 }
@@ -80,7 +79,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "com.google.truth:truth:1.4.0"
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.8.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-html-jvm:0.11.0'
 }
 
 afterEvaluate {
