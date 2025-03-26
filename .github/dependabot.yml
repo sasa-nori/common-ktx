@@ -8,6 +8,7 @@ updates:
     labels:
       - chore
       - dependencies
+      - auto_pr
     ignore:
       - dependency-name: "*"
         update-types: [ "version-update:semver-patch" ]
